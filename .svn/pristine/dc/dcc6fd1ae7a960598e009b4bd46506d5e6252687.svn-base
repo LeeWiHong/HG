@@ -1,0 +1,41 @@
+//
+//  HGRegSetMainController.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/13.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGRegSetMainController.h"
+#import "HGRegSetView.h"
+
+@interface HGRegSetMainController ()
+
+@end
+
+@implementation HGRegSetMainController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithHexString:HGWhite];
+    [self setUpRegSetBodyView];
+}
+
+#pragma mark - 初始化设置密码视图
+
+- (void) setUpRegSetBodyView
+{
+    HGRegSetView *RegSetView = [[HGRegSetView alloc] init];
+    [self.view addSubview:RegSetView];
+    
+    [RegSetView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.top).offset(0);
+        make.left.equalTo(self.view.left).offset(0);
+        make.bottom.equalTo(self.view.bottom).offset(0);
+        make.right.equalTo(self.view.right).offset(0);
+    }];
+}
+
+
+
+@end

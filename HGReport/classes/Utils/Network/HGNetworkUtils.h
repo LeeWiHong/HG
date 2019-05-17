@@ -1,0 +1,44 @@
+//
+//  HGNetworkUtils.h
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/13.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+typedef void (^SuccessBlock)(NSDictionary *data);
+
+typedef void (^FailureBlock)(NSError *error);
+
+//typedef NS_OPTIONS(NSUInteger, HGMethodType) {
+//    GET = 0,
+//    POST = 1 << 0,
+//};
+
+typedef NS_ENUM(NSUInteger, HGMethodType) {
+    GET,
+    POST,
+};
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface HGNetworkUtils : NSObject
+
+/*** successBlock**/
+@property (nonatomic, copy) SuccessBlock successBlock;
+
+@property (nonatomic, copy) FailureBlock failureBlock;
+
+#pragma mark - 网络请求
+
++ (void)ConnectWithMeThod:(HGMethodType)Method Url:(NSString *)UrlString Parameters:(id)Parameters Success:(SuccessBlock)SuccessBlock Failure:(FailureBlock)FailureBlock;
+
+#pragma mark - 删除cookie
+
++ (void)DeleteCookie;
+
+@end
+
+NS_ASSUME_NONNULL_END

@@ -1,0 +1,1 @@
+link ../../../SDWebImage/SDWebImage/Private/SDImageCachesManagerOperation.h

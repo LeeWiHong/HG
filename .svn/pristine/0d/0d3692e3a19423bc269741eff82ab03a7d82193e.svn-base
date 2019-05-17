@@ -1,0 +1,56 @@
+//
+//  HGHUD.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/10.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGHUD.h"
+
+@implementation HGHUD
+
++ (void) ShowWaiting{
+    HGHUD *HUD = [[HGHUD alloc] initWithFrame:CGRectMake(0, 0, HGWidth, HGHeight)];
+    HUD.backgroundColor = [[UIColor colorWithHexString:HGWhite] colorWithAlphaComponent:0.01];
+    
+    UIActivityIndicatorView *WaitView = [[UIActivityIndicatorView alloc] init];
+    [WaitView setBackgroundColor:[UIColor colorWithHexString:HGStateGray]];
+    WaitView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    WaitView.alpha = 0.6;
+    WaitView.layer.cornerRadius = 10;
+    WaitView.hidesWhenStopped = NO;
+    
+    [WaitView startAnimating];
+    [HUD addSubview:WaitView];
+    
+    [WaitView makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(HUD.centerY).offset(0);
+        make.centerX.equalTo(HUD.centerX).offset(0);
+        make.width.mas_equalTo(160 * HGAutoWidth);
+        make.height.mas_equalTo(160 * HGAutoHeight);
+    }];
+    [UIApplication sharedApplication].keyWindow.userInteractionEnabled = NO;
+    [[UIApplication sharedApplication].keyWindow addSubview:HUD];
+}
+
+#pragma mark - 等待视图消失
+
++ (void) DissmissWaiting{
+    for (UIView *subview in [UIApplication sharedApplication].keyWindow.subviews)
+    {
+        if ([subview isKindOfClass:self]) {
+            [subview removeFromSuperview];
+        }
+    }
+    [UIApplication sharedApplication].keyWindow.userInteractionEnabled = YES;
+}
+
+#pragma mark - HUD弹框带文字视图
+
++ (void) ShowHUDStateWith:(NSString *)HUDState{
+    
+}
+
+
+@end

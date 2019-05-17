@@ -1,0 +1,90 @@
+//
+//  HGRegSetView.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/13.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGRegSetView.h"
+
+@implementation HGRegSetView
+
+- (instancetype)init{
+    if (self == [super init]) {
+        [self setUpRegSetBodyView];
+    }
+    return self;
+}
+
+#pragma mark - 初始化设置视图
+
+- (void) setUpRegSetBodyView
+{
+    UITextField *UserNameField = [[UITextField alloc] init];
+    UserNameField.placeholder = @"昵称";
+    UserNameField.borderStyle = UITextBorderStyleRoundedRect;
+    UserNameField.textAlignment = NSTextAlignmentCenter;
+    UserNameField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    UserNameField.keyboardType = UIKeyboardTypeDefault;
+    self.UserNameField = UserNameField;
+    [self addSubview:UserNameField];
+    
+    [UserNameField makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.top).offset(20 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(60 * HGAutoWidth);
+        make.right.equalTo(self.right).offset(-60 * HGAutoWidth);
+        make.height.mas_equalTo(80 * HGAutoHeight);
+    }];
+    
+    UITextField *PasswordField = [[UITextField alloc] init];
+    PasswordField.placeholder = @"密码";
+    PasswordField.borderStyle = UITextBorderStyleRoundedRect;
+    PasswordField.textAlignment = NSTextAlignmentCenter;
+    PasswordField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    PasswordField.keyboardType = UIKeyboardTypeAlphabet;
+    PasswordField.secureTextEntry = YES;
+    self.PasswordField = PasswordField;
+    [self addSubview:PasswordField];
+    
+    [PasswordField makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(UserNameField.bottom).offset(20 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(60 * HGAutoWidth);
+        make.right.equalTo(self.right).offset(-60 * HGAutoWidth);
+        make.height.mas_equalTo(80 * HGAutoHeight);
+    }];
+    
+    UITextField *RPPasswordField = [[UITextField alloc] init];
+    RPPasswordField.placeholder = @"重复密码";
+    RPPasswordField.borderStyle = UITextBorderStyleRoundedRect;
+    RPPasswordField.textAlignment = NSTextAlignmentCenter;
+    RPPasswordField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    RPPasswordField.keyboardType = UIKeyboardTypeAlphabet;
+    RPPasswordField.secureTextEntry = YES;
+    self.RPPasswordField = RPPasswordField;
+    [self addSubview:RPPasswordField];
+    
+    [RPPasswordField makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(PasswordField.bottom).offset(20 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(60 * HGAutoWidth);
+        make.right.equalTo(self.right).offset(-60 * HGAutoWidth);
+        make.height.mas_equalTo(80 * HGAutoHeight);
+    }];
+    
+    UIButton *FinishBtn = [UIButton BtnWithImage:nil NormalTitle:@"完成" NormalTitleColor:HGRED TitleFont:20 BoolTitleFont:YES];
+    FinishBtn.layer.cornerRadius = 5;
+    FinishBtn.layer.borderWidth = 1;
+    FinishBtn.layer.borderColor = [[UIColor colorWithHexString:HGWhiteGray] CGColor];
+    self.FinishBtn = FinishBtn;
+    [self addSubview:FinishBtn];
+    
+    [FinishBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(RPPasswordField.bottom).offset(20 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(60 * HGAutoWidth);
+        make.right.equalTo(self.right).offset(-60 * HGAutoWidth);
+        make.height.mas_equalTo(80 * HGAutoHeight);
+    }];
+    
+}
+
+@end

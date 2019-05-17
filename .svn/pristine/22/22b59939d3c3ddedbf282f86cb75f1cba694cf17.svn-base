@@ -1,0 +1,56 @@
+//
+//  PrefixHeader.pch
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/10.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// 1.分类导入文件
+#import "UIColor+HGColor.h"
+#import "UIView+HGView.h"
+#import "UIImage+HGImage.h"
+#import "UILabel+HGLabel.h"
+#import "UIBarButtonItem+HGBarButtonItem.h"
+#import "UIButton+HGButton.h"
+#import "UIScrollView+HeaderScaleImage.h"
+#import <UINavigationController+FDFullscreenPopGesture.h>
+#import "HGNetworkUtils.h"
+#define MAS_SHORTHAND
+#import <Masonry.h>
+
+// 2.颜色
+#define HGTabSelectColor @"#E2231A"
+#define HGTabNormalColor @"#4F4F4F"
+#define HGWhiteGray @"#F0F0F0"
+#define HGWhite @"#FFFFFF"
+#define HGBlack @"#000000"
+#define HGRED @"#FF3838"
+
+
+#define HGTabButtonTitleFont [UIFont systemFontOfSize:12]
+#define HGNavTitleFont [UIFont systemFontOfSize:18]
+
+// 3.屏幕高度等
+// 自定义屏幕宽高度
+#define HGWidth [UIScreen mainScreen].bounds.size.width
+#define HGHeight [UIScreen mainScreen].bounds.size.height
+#define HGFrame     [UIScreen mainScreen].bounds
+
+#define HGHEIGHTX (([[UIScreen mainScreen] bounds].size.height-812)?HGHeight:HGHeight-34)
+
+// 自定义适配屏幕宽度
+#define HGAutoWidth HGWidth / 750
+#define HGAutoHeight HGHeight / 1334
+
+// 4.导入一些第三方
+#import <AFNetworking.h>
+
+// 5.系统配置
+#import "HGAddressBook.h"
+
+
+#endif /* PrefixHeader_pch */

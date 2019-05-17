@@ -1,0 +1,146 @@
+//
+//  HGHUD.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/10.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGHUD.h"
+
+@interface HGHUD ()
+
+@property(nonatomic,strong) UILabel *StateLabel;
+
+@end
+
+@implementation HGHUD
+
+- (instancetype)initWithView:(UIView *)ShowView
+{
+    HGHUD *HUD = [[HGHUD alloc] initWithFrame:ShowView.bounds];
+    HUD.backgroundColor = [[UIColor colorWithHexString:HGWhite] colorWithAlphaComponent:0.01];
+    [ShowView addSubview:HUD];
+    return HUD;
+}
+
+- (void) ShowWaiting{
+
+    UIActivityIndicatorView *WaitView = [[UIActivityIndicatorView alloc] init];
+    [WaitView setBackgroundColor:[UIColor colorWithHexString:HGStateGray]];
+    WaitView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    WaitView.alpha = 0.6;
+    WaitView.layer.cornerRadius = 10;
+    WaitView.hidesWhenStopped = NO;
+    
+    [WaitView startAnimating];
+    [self addSubview:WaitView];
+    
+    [WaitView makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.centerY).offset(0);
+        make.centerX.equalTo(self.centerX).offset(0);
+        make.width.mas_equalTo(160 * HGAutoWidth);
+        make.height.mas_equalTo(160 * HGAutoHeight);
+    }];
+}
+
+#pragma mark - 等待视图消失
+
+- (void) DissmissWaiting{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self removeFromSuperview];
+    });
+}
+
+//#pragma mark - HUD弹框带文字视图
+
+- (void)ShowWaitWithState:(NSString *)State
+{
+    if (self.StateLabel) {
+        self.StateLabel.text = State;
+    }
+    else{
+        UIActivityIndicatorView *WaitView = [[UIActivityIndicatorView alloc] init];
+        [WaitView setBackgroundColor:[UIColor colorWithHexString:HGStateGray]];
+        WaitView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+        WaitView.alpha = 0.6;
+        WaitView.layer.cornerRadius = 10;
+        WaitView.hidesWhenStopped = NO;
+        
+        [WaitView startAnimating];
+        [self addSubview:WaitView];
+        
+        [WaitView makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self.centerY).offset(0);
+            make.centerX.equalTo(self.centerX).offset(0);
+            make.width.mas_equalTo(160 * HGAutoWidth);
+            make.height.mas_equalTo(160 * HGAutoHeight);
+        }];
+        
+        UILabel *StateLabel = [UILabel LabelWithFone:14 Color:HGBlack];
+        StateLabel.text = State;
+        self.StateLabel = StateLabel;
+        [self addSubview:StateLabel];
+        
+        [StateLabel makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.centerX).offset(0);
+            make.top.equalTo(WaitView.bottom).offset(20 * HGAutoHeight);
+        }];
+    }
+}
+
+- (void)ShowWaitWithState:(NSString *)State Complete:(CompleteBlock)complete
+{
+    [self ShowWaitWithState:State];
+    complete();
+}
+
+- (void)ShowWaitWithState:(NSString *)State Excute:(ExecuteBlock)Excute  Complete:(CompleteBlock)complete
+{
+    [self ShowWaitWithState:State];
+    dispatch_queue_t tasksQueue = dispatch_queue_create("tasksQueue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(tasksQueue, ^{
+        // 真正用来完成任务的线程
+        dispatch_queue_t performTasksQueue = dispatch_queue_create("performTasksQueue", DISPATCH_QUEUE_CONCURRENT);
+        dispatch_group_t group = dispatch_group_create();
+        dispatch_group_enter(group);
+        dispatch_async(performTasksQueue, ^{
+            Excute();
+            dispatch_group_leave(group);
+        });
+        
+        dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            complete();
+        });
+    });
+}
+
+- (void)ShowToastWithState:(NSString *)State Complete:(CompleteBlock)complete
+{
+    UIView *BackPlaceView = [[UIView alloc] init];
+    BackPlaceView.backgroundColor = [UIColor colorWithHexString:HGWhiteGray];
+    BackPlaceView.alpha = 0.9;
+    BackPlaceView.layer.cornerRadius = 5;
+    [self addSubview:BackPlaceView];
+    
+    [BackPlaceView makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.centerX).offset(0);
+        make.centerY.equalTo(self.centerY).offset(0);
+        make.width.mas_equalTo(360 * HGAutoWidth);
+        make.height.mas_equalTo(140 * HGAutoHeight);
+    }];
+    
+    UILabel *StateLabel = [UILabel LabelWithFone:14 Color:HGBlack];
+    StateLabel.text = State;
+    [BackPlaceView addSubview:StateLabel];
+    
+    [StateLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(BackPlaceView.centerX).offset(0);
+        make.centerY.equalTo(BackPlaceView.centerY).offset(0);
+    }];
+    complete();
+}
+
+
+@end

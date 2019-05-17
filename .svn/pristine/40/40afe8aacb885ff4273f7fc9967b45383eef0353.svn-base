@@ -1,0 +1,126 @@
+//
+//  HGForgetView.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/13.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGForgetView.h"
+
+@implementation HGForgetView
+
+- (instancetype)init
+{
+    if (self == [super init]) {
+        [self setUpForgetBodyView];
+    }
+    return self;
+}
+
+#pragma mark - 初始化忘记视图
+
+- (void) setUpForgetBodyView
+{
+    UIView *TopSepLine = [[UIView alloc] init];
+    TopSepLine.backgroundColor = [UIColor colorWithHexString:HGWhiteGray];
+    [self addSubview:TopSepLine];
+    
+    [TopSepLine makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.top).offset(180 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(0);
+        make.right.equalTo(self.right).offset(0);
+        make.height.mas_equalTo(1);
+    }];
+    
+    UITextField *UserNameField = [[UITextField alloc] init];
+    UserNameField.placeholder = @"请输入手机号";
+    UserNameField.borderStyle = UITextBorderStyleRoundedRect;
+    UserNameField.textAlignment = NSTextAlignmentCenter;
+    UserNameField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    UserNameField.keyboardType = UIKeyboardTypeNumberPad;
+    self.UserNameField = UserNameField;
+    [self addSubview:UserNameField];
+    
+    [UserNameField makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(TopSepLine.bottom).offset(20 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(60 * HGAutoHeight);
+        make.right.equalTo(self.right).offset(-60 * HGAutoHeight);
+        make.height.mas_equalTo(80 * HGAutoHeight);
+    }];
+    
+    UITextField *CodeFiled = [[UITextField alloc] init];
+    CodeFiled.placeholder = @"验证码";
+    CodeFiled.borderStyle = UITextBorderStyleRoundedRect;
+    CodeFiled.textAlignment = NSTextAlignmentCenter;
+    CodeFiled.keyboardType = UIKeyboardTypeNumberPad;
+    self.CodeFiled = CodeFiled;
+    [self addSubview:CodeFiled];
+    
+    [CodeFiled makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(UserNameField.bottom).offset(20 * HGAutoHeight);
+        make.left.equalTo(UserNameField.left).offset(0);
+        make.right.equalTo(UserNameField.centerX).offset(0);
+        make.height.mas_equalTo(80 * HGAutoHeight);
+    }];
+    
+    UIButton *GetCodeBtn = [UIButton BtnWithImage:nil NormalTitle:@"获取验证码" NormalTitleColor:HGBlack TitleFont:12 BoolTitleFont:NO];
+    GetCodeBtn.layer.borderWidth = 1;
+    GetCodeBtn.layer.cornerRadius = 5;
+    GetCodeBtn.layer.borderColor = [[UIColor colorWithHexString:HGWhiteGray] CGColor];
+    self.GetCodeBtn = GetCodeBtn;
+    [self addSubview:GetCodeBtn];
+    
+    [GetCodeBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(CodeFiled.centerY).offset(0);
+        make.left.equalTo(CodeFiled.right).offset(50 * HGAutoWidth);
+        make.right.equalTo(UserNameField.right).offset(-50 * HGAutoWidth);
+        make.height.mas_equalTo(60 * HGAutoHeight);
+    }];
+    
+    UITextField *NewPaswordField = [[UITextField alloc] init];
+    NewPaswordField.placeholder = @"请设置密码";
+    NewPaswordField.borderStyle = UITextBorderStyleRoundedRect;
+    NewPaswordField.textAlignment = NSTextAlignmentCenter;
+    NewPaswordField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    NewPaswordField.secureTextEntry = YES;
+    NewPaswordField.keyboardType = UIKeyboardTypeAlphabet;
+    self.NewPaswordField = NewPaswordField;
+    [self addSubview:NewPaswordField];
+    
+    [NewPaswordField makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(CodeFiled.bottom).offset(20 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(60 * HGAutoHeight);
+        make.right.equalTo(self.right).offset(-60 * HGAutoHeight);
+        make.height.mas_equalTo(80 * HGAutoHeight);
+    }];
+    
+    UIView *BottomSepLine = [[UIView alloc] init];
+    BottomSepLine.backgroundColor = [UIColor colorWithHexString:HGWhiteGray];
+    [self addSubview:BottomSepLine];
+    
+    [BottomSepLine makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(NewPaswordField.bottom).offset(20 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(0);
+        make.right.equalTo(self.right).offset(0);
+        make.height.mas_equalTo(1);
+    }];
+    
+    UIButton *FinishBtn = [UIButton BtnWithImage:nil NormalTitle:@"确  定" NormalTitleColor:HGRED TitleFont:20 BoolTitleFont:YES];
+    FinishBtn.layer.cornerRadius = 5;
+    FinishBtn.layer.borderColor = [[UIColor colorWithHexString:HGWhiteGray] CGColor];
+    FinishBtn.layer.borderWidth = 1;
+    self.FinishBtn = FinishBtn;
+    [self addSubview:FinishBtn];
+    
+    [FinishBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(BottomSepLine.bottom).offset(40 * HGAutoHeight);
+        make.left.equalTo(NewPaswordField.left).offset(0);
+        make.right.equalTo(NewPaswordField.right).offset(0);
+        make.height.mas_equalTo(80 * HGAutoHeight);
+    }];
+    
+    
+}
+
+@end

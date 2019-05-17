@@ -1,0 +1,29 @@
+//
+//  HGForgetView.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/13.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGForgetView.h"
+
+@implementation HGForgetView
+
+- (instancetype)init
+{
+    if (self == [super init]) {
+        
+    }
+    return self;
+}
+
+#pragma mark - 初始化忘记body视图
+
+- (void) setUpForgetBodyView
+{
+    UITextField *PhoneField = [[UITextField alloc] init];
+    
+}
+
+@end

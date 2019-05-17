@@ -1,0 +1,50 @@
+//
+//  HGLoginMainController.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/12.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGLoginMainController.h"
+#import "HGLoginView.h"
+
+@interface HGLoginMainController ()
+
+@end
+
+@implementation HGLoginMainController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.title = @"登录";
+    self.view.backgroundColor = [UIColor colorWithHexString:HGWhite];
+    [self setUpLoginBodyView];
+}
+
+#pragma mark - 初始化主体视图
+
+- (void) setUpLoginBodyView
+{
+    HGLoginView *LoginView = [[HGLoginView alloc] init];
+    [self.view addSubview:LoginView];
+    
+    [LoginView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.top).offset(0);
+        make.left.equalTo(self.view.left).offset(0);
+        make.bottom.equalTo(self.view.bottom).offset(0);
+        make.right.equalTo(self.view.right).offset(0);
+    }];
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

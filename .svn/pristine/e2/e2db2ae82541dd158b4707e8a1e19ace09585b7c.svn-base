@@ -1,0 +1,30 @@
+//
+//  HGHUD.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/10.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGHUD.h"
+
+@implementation HGHUD
+
++ (void) ShowNetWaitingWithStates:(NSString *)State{
+    
+}
+
+#pragma mark - 网络等待视图消失
+
++ (void) NetWaitingDissmiss{
+    
+}
+
+#pragma mark - HUD弹框带文字视图
+
++ (void) ShowHUDStateWith:(NSString *)HUDState{
+    
+}
+
+
+@end

@@ -1,0 +1,16 @@
+//
+//  HGAddressBook.h
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/13.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#ifndef HGAddressBook_h
+#define HGAddressBook_h
+
+#define HostUrl @"http://192.168.0.244:8080"
+
+#define TestApi @"/api/p2"
+
+#endif /* HGAddressBook_h */

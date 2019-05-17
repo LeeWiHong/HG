@@ -1,0 +1,39 @@
+//
+//  HGHUD.h
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/10.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+typedef void(^CompleteBlock)(void);
+
+typedef void(^ExecuteBlock)(void);
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface HGHUD : UIView
+
+#pragma mark - 网络等待视图
+
++ (void) ShowWaitingWithView:(UIView *)ShowView;
+
+#pragma mark - 网络等待视图消失
+
++ (void) DissmissWaitingInView:(UIView *)ShowView;
+
+#pragma mark - HUD弹框带文字视图
+
++ (void) ShowWaitStateWithView:(UIView *)ShowView State:(NSString *)State;
+
+#pragma mark - HUD弹框带文字视图带完成block
+
++ (void) ShowWaitStateWithView:(UIView *)ShowView WithState:(NSString *)State Excute:(ExecuteBlock) Excute Complete:(CompleteBlock)complete;
+
++ (void)ShowStateWithView:(UIView *)ShowView WithState:(NSString *)State Complete:(CompleteBlock)complete;
+
+@end
+
+NS_ASSUME_NONNULL_END

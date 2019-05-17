@@ -1,0 +1,52 @@
+//
+//  HGLoginView.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/12.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGLoginView.h"
+
+@implementation HGLoginView
+
+- (instancetype)init
+{
+    if (self == [super init]) {
+        [self setUpLoginBodyView];
+    }
+    return self;
+}
+
+#pragma mark - 初始化登录视图
+
+- (void) setUpLoginBodyView
+{
+    UIView *TopSepLine = [[UIView alloc] init];
+    TopSepLine.backgroundColor = [UIColor colorWithHexString:HGWhiteGray];
+    [self addSubview:TopSepLine];
+    
+    [TopSepLine makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.top).offset(180 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(0);
+        make.right.equalTo(self.right).offset(0);
+        make.height.mas_equalTo(1);
+    }];
+    
+    UITextField *UserNameField = [[UITextField alloc] init];
+    UserNameField.placeholder = @"请输入手机号";
+    UserNameField.borderStyle = UITextBorderStyleRoundedRect;
+    UserNameField.textAlignment = NSTextAlignmentCenter;
+    UserNameField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    UserNameField.keyboardType = UIKeyboardTypeNumberPad;
+    [self addSubview:UserNameField];
+    
+    [UserNameField makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(TopSepLine.bottom).offset(10 * HGAutoHeight);
+        make.left.equalTo(self.left).offset(60 * HGAutoHeight);
+        make.right.equalTo(self.right).offset(-60 * HGAutoHeight);
+        make.height.mas_equalTo(80 * HGAutoHeight);
+    }];
+}
+
+@end

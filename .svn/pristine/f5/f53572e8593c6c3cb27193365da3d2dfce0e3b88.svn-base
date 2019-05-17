@@ -1,0 +1,27 @@
+//
+//  HGAddressBook.h
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/13.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#ifndef HGAddressBook_h
+#define HGAddressBook_h
+
+#define HostUrl @"http://192.168.2.2:8080"
+
+#define TestApi @"/api/p2"
+
+// 注册接口
+#define register @"/api/register"
+// 获取公钥
+#define getpublickey @"/api/getpublickey"
+// 获取验证码
+#define verificode @"/api/verificode"
+// 登录
+#define login @"/api/login"
+// 退出
+#define loginout @"/api/loginout"
+
+#endif /* HGAddressBook_h */

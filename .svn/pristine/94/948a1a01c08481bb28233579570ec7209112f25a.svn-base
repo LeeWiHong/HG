@@ -1,0 +1,53 @@
+//
+//  HGRegisterMainController.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/13.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGRegisterMainController.h"
+#import "HGRegisterView.h"
+#import "HGRegSetMainController.h"
+
+@interface HGRegisterMainController ()
+
+@end
+
+@implementation HGRegisterMainController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithHexString:HGWhite];
+    [self setUpRegisterBodyView];
+}
+
+#pragma mark - 初始化注册视图
+
+- (void) setUpRegisterBodyView
+{
+    HGRegisterView *RegisterView = [[HGRegisterView alloc] init];
+    [RegisterView.RegisterBtn addTarget:self action:@selector(Jump2RegisterSettingVC) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:RegisterView];
+    
+    [RegisterView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.top).offset(0);
+        make.left.equalTo(self.view.left).offset(0);
+        make.bottom.equalTo(self.view.bottom).offset(0);
+        make.right.equalTo(self.view.right).offset(0);
+    }];
+}
+
+#pragma mark - 跳转到设置密码界面
+
+- (void) Jump2RegisterSettingVC
+{
+    HGRegSetMainController *RegSetVC = [[HGRegSetMainController alloc] init];
+    RegSetVC.navigationItem.title = @"设置密码";
+    RegSetVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:RegSetVC animated:YES];
+}
+
+
+
+@end

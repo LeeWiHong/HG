@@ -1,0 +1,77 @@
+//
+//  HGRegisterMainController.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/13.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGRegisterMainController.h"
+#import "HGRegisterView.h"
+#import "HGRegSetMainController.h"
+#import <SMS_SDK/SMSSDK.h>
+
+@interface HGRegisterMainController ()
+@property(nonatomic,weak) HGRegisterView *RegisterView;
+
+@property(nonatomic,copy) NSString *PhoneNumber;
+
+@property(nonatomic,strong) MBProgressHUD *HUD;
+
+@end
+
+@implementation HGRegisterMainController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithHexString:HGWhite];
+    [self setUpRegisterBodyView];
+}
+
+#pragma mark - 初始化注册视图
+
+- (void) setUpRegisterBodyView
+{
+    HGRegisterView *RegisterView = [[HGRegisterView alloc] init];
+    [RegisterView.LoginBtn addTarget:self action:@selector(Jump2RegSetVC) forControlEvents:UIControlEventTouchUpInside];
+    [RegisterView.GetCodeBtn addTarget:self action:@selector(GetMessageCode) forControlEvents:UIControlEventTouchUpInside];
+    self.PhoneNumber = RegisterView.PhoneField.text;
+    self.RegisterView = RegisterView;
+    [self.view addSubview:RegisterView];
+    
+    [RegisterView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.top).offset(0);
+        make.left.equalTo(self.view.left).offset(0);
+        make.bottom.equalTo(self.view.bottom).offset(0);
+        make.right.equalTo(self.view.right).offset(0);
+    }];
+}
+
+#pragma mark - 跳转到注册设置界面
+
+- (void) Jump2RegSetVC
+{
+    HGRegSetMainController *RegSetVC = [[HGRegSetMainController alloc] init];
+    RegSetVC.navigationItem.title = @"设置";
+    RegSetVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:RegSetVC animated:YES];
+}
+
+#pragma mark - 获取验证码
+
+- (void) GetMessageCode
+{
+    [HGHUD ShowWaiting];
+//    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.RegisterView.PhoneField.text zone:@"86" template:nil result:^(NSError *error) {
+//            if (!error) {
+//                NSLog(@"请求成功了");
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                });
+//            }
+//            else{
+//                NSLog(@"请求失败了");
+//            }
+//        }];
+}
+
+@end

@@ -1,0 +1,26 @@
+//
+//  HGCateMainController.m
+//  HGReport
+//
+//  Created by LeeWiHong on 2019/5/10.
+//  Copyright © 2019 com.360arrow. All rights reserved.
+//
+
+#import "HGCateMainController.h"
+
+@interface HGCateMainController ()
+
+@end
+
+@implementation HGCateMainController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.title = @"分类";
+    
+    
+}
+
+
+
+@end
