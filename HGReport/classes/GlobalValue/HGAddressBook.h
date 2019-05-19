@@ -25,5 +25,8 @@
 #define LOGIN @"/api/login"
 // 退出
 #define LOGINOUT @"/api/loginout"
+// 更改密码
+#define UPDATEPASSWORD @"/api/updatepassword"
+
 
 #endif /* HGAddressBook_h */
