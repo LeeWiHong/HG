@@ -45,6 +45,7 @@
     UserNameField.clearButtonMode = UITextFieldViewModeWhileEditing;
     UserNameField.keyboardType = UIKeyboardTypeNumberPad;
     UserNameField.delegate = self;
+    self.UserNameField = UserNameField;
     [self addSubview:UserNameField];
     
     [UserNameField makeConstraints:^(MASConstraintMaker *make) {
@@ -61,6 +62,7 @@
     PassWordFiled.clearButtonMode = UITextFieldViewModeWhileEditing;
     PassWordFiled.keyboardType = UIKeyboardTypeAlphabet;
     PassWordFiled.secureTextEntry = YES;
+    self.PassWordFiled = PassWordFiled;
     [self addSubview:PassWordFiled];
     
     [PassWordFiled makeConstraints:^(MASConstraintMaker *make) {

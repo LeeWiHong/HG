@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,weak) UIButton *LoginBtn;
 
+@property(nonatomic,weak) UITextField *UserNameField;
+
+@property(nonatomic,weak) UITextField *PassWordFiled;
+
 @end
 
 NS_ASSUME_NONNULL_END

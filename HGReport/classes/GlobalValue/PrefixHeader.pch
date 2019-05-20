@@ -48,6 +48,8 @@
 #define HGAutoWidth HGWidth / 750
 #define HGAutoHeight HGHeight / 1334
 
+#define HGDefaults [NSUserDefaults standardUserDefaults]
+
 // 4.导入一些第三方
 #import <AFNetworking.h>
 #import <MBProgressHUD.h>

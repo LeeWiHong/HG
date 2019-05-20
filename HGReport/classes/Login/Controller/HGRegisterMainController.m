@@ -106,6 +106,7 @@
         [dict setValue:self.RegisterView.CodeField.text forKey:@"code"];
         [self.Connection ConnectWithMeThod:GET Url:VERIFICODE Parameters:dict Success:^(NSDictionary *data) {
             if ([[data valueForKey:@"success"] boolValue]) {
+                [HGDefaults setValue:[[data valueForKey:@"data"] valueForKey:@"publickey"]  forKey:@"publickey"];
 //                跳转到注册设置界面
                 [self Jump2RegSetVCWithPublickKey:[[data valueForKey:@"data"] valueForKey:@"publickey"] WithTelephone:self.RegisterView.PhoneField.text];
             }
