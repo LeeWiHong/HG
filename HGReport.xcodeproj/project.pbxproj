@@ -10,19 +10,9 @@
 		F30E1AC62285E231007E91FA /* UILabel+HGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F30E1AC52285E231007E91FA /* UILabel+HGLabel.m */; };
 		F30E1AC82285E559007E91FA /* icon_enter2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F30E1AC72285E558007E91FA /* icon_enter2@2x.png */; };
 		F318C0FE22867184000D4D94 /* UIScrollView+HeaderScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F318C0FC22867184000D4D94 /* UIScrollView+HeaderScaleImage.m */; };
-		F318C1012286723C000D4D94 /* HGPersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F318C1002286723C000D4D94 /* HGPersonalHeaderView.m */; };
-		F326B26522898F8D00CAE1AA /* HGRegSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = F326B26422898F8D00CAE1AA /* HGRegSetView.m */; };
 		F326B2682289AAF400CAE1AA /* HGNetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F326B2672289AAF400CAE1AA /* HGNetworkUtils.m */; };
-		F332A82E2285E05C00D459AD /* HGPersonalTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F332A82D2285E05C00D459AD /* HGPersonalTabView.m */; };
-		F332A8312285E10F00D459AD /* HGPersonalTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F332A8302285E10F00D459AD /* HGPersonalTabCell.m */; };
-		F3831A8422896C0700431A67 /* HGForgetMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3831A8322896C0700431A67 /* HGForgetMainController.m */; };
-		F3831A8722896C1800431A67 /* HGForgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3831A8622896C1800431A67 /* HGForgetView.m */; };
-		F3831A8A22896C9800431A67 /* HGRegisterMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3831A8922896C9800431A67 /* HGRegisterMainController.m */; };
-		F3831A8D22896CAC00431A67 /* HGRegSetMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3831A8C22896CAC00431A67 /* HGRegSetMainController.m */; };
-		F3831A9022896CBE00431A67 /* HGRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3831A8F22896CBE00431A67 /* HGRegisterView.m */; };
 		F392C8AB228C0F1D007655DE /* HGExpressTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F392C8AA228C0F1D007655DE /* HGExpressTools.m */; };
 		F39424A9228D478700546C90 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = F39424A7228D478700546C90 /* RSA.m */; };
-		F3AB7599228E677900D273E5 /* HGUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AB7598228E677900D273E5 /* HGUserInfoModel.m */; };
 		F3BA2827228A6BDA00103778 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BA2826228A6BDA00103778 /* libz.tbd */; };
 		F3BA2829228A6BE300103778 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BA2828228A6BE300103778 /* libicucore.tbd */; };
 		F3BA282B228A6BEC00103778 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BA282A228A6BEC00103778 /* MessageUI.framework */; };
@@ -32,10 +22,25 @@
 		F3BA2833228A6C2E00103778 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BA2832228A6C2E00103778 /* CoreTelephony.framework */; };
 		F3BA2835228A6C3600103778 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BA2834228A6C3600103778 /* AdSupport.framework */; };
 		F3C7326F22867977006DA61C /* defaulthead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3C7326E22867977006DA61C /* defaulthead@2x.png */; };
-		F3CEC13822886D530022161D /* HGLoginMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC13722886D530022161D /* HGLoginMainController.m */; };
-		F3CEC13B22886D6C0022161D /* HGLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC13A22886D6C0022161D /* HGLoginView.m */; };
 		F3CEC13E228870CB0022161D /* UIButton+HGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC13D228870CB0022161D /* UIButton+HGButton.m */; };
 		F3CF7461487885F3455D18C5 /* libPods-HGReport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 143842FE5D00F58015F1E9CB /* libPods-HGReport.a */; };
+		F3D6ADC622925D1000F66070 /* HGLoginMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D6ADC422925D1000F66070 /* HGLoginMainController.m */; };
+		F3D6ADC922925DB200F66070 /* HGAdviceFeedMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D6ADC822925DB200F66070 /* HGAdviceFeedMainController.m */; };
+		F3D6ADCC2292794400F66070 /* HGAdviceFeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D6ADCB2292794400F66070 /* HGAdviceFeedView.m */; };
+		F3DC312422925BBE00E42C91 /* HGCateMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC312022925BBD00E42C91 /* HGCateMainController.m */; };
+		F3DC312B22925C0A00E42C91 /* HGHomeMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC312722925C0A00E42C91 /* HGHomeMainController.m */; };
+		F3DC313822925C1100E42C91 /* HGPersonalMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC312F22925C1100E42C91 /* HGPersonalMainController.m */; };
+		F3DC313922925C1100E42C91 /* HGPersonalTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC313222925C1100E42C91 /* HGPersonalTabCell.m */; };
+		F3DC313A22925C1100E42C91 /* HGPersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC313322925C1100E42C91 /* HGPersonalHeaderView.m */; };
+		F3DC313B22925C1100E42C91 /* HGPersonalTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC313422925C1100E42C91 /* HGPersonalTabView.m */; };
+		F3DC315222925C1B00E42C91 /* HGRegisterMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC314122925C1A00E42C91 /* HGRegisterMainController.m */; };
+		F3DC315422925C1B00E42C91 /* HGForgetMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC314322925C1A00E42C91 /* HGForgetMainController.m */; };
+		F3DC315522925C1B00E42C91 /* HGRegSetMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC314422925C1A00E42C91 /* HGRegSetMainController.m */; };
+		F3DC315622925C1B00E42C91 /* HGUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC314722925C1A00E42C91 /* HGUserInfoModel.m */; };
+		F3DC315722925C1B00E42C91 /* HGRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC314A22925C1A00E42C91 /* HGRegisterView.m */; };
+		F3DC315822925C1B00E42C91 /* HGLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC314B22925C1A00E42C91 /* HGLoginView.m */; };
+		F3DC315922925C1B00E42C91 /* HGForgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC315022925C1B00E42C91 /* HGForgetView.m */; };
+		F3DC315A22925C1B00E42C91 /* HGRegSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC315122925C1B00E42C91 /* HGRegSetView.m */; };
 		F3EE06502285532500F03534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EE064E2285532500F03534 /* Main.storyboard */; };
 		F3EE06522285532600F03534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3EE06512285532600F03534 /* Assets.xcassets */; };
 		F3EE06552285532600F03534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EE06532285532600F03534 /* LaunchScreen.storyboard */; };
@@ -46,11 +51,8 @@
 		F3EE06842285537A00F03534 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE067F2285537A00F03534 /* AppDelegate.m */; };
 		F3EE069C228555E700F03534 /* HGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE069B228555E700F03534 /* HGTabBarController.m */; };
 		F3EE06A52285568C00F03534 /* HGBaseMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE06A42285568C00F03534 /* HGBaseMainController.m */; };
-		F3EE06A8228556CE00F03534 /* HGCateMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE06A7228556CE00F03534 /* HGCateMainController.m */; };
-		F3EE06AB2285570900F03534 /* HGHomeMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE06AA2285570900F03534 /* HGHomeMainController.m */; };
 		F3EE06B222855ADD00F03534 /* UIColor+HGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE06B122855ADD00F03534 /* UIColor+HGColor.m */; };
 		F3EE06B52285622700F03534 /* HGMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE06B42285622700F03534 /* HGMainNavController.m */; };
-		F3EE06B8228562B900F03534 /* HGPersonalMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE06B7228562B900F03534 /* HGPersonalMainController.m */; };
 		F3EE06BB2285644800F03534 /* UIImage+HGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE06BA2285644800F03534 /* UIImage+HGImage.m */; };
 		F3EE06C52285659C00F03534 /* btn_wd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3EE06BD2285659B00F03534 /* btn_wd@2x.png */; };
 		F3EE06C62285659C00F03534 /* btn_wd2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3EE06BE2285659B00F03534 /* btn_wd2@2x.png */; };
@@ -93,33 +95,13 @@
 		F30E1AC72285E558007E91FA /* icon_enter2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_enter2@2x.png"; sourceTree = "<group>"; };
 		F318C0FC22867184000D4D94 /* UIScrollView+HeaderScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HeaderScaleImage.m"; sourceTree = "<group>"; };
 		F318C0FD22867184000D4D94 /* UIScrollView+HeaderScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HeaderScaleImage.h"; sourceTree = "<group>"; };
-		F318C0FF2286723C000D4D94 /* HGPersonalHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGPersonalHeaderView.h; sourceTree = "<group>"; };
-		F318C1002286723C000D4D94 /* HGPersonalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGPersonalHeaderView.m; sourceTree = "<group>"; };
-		F326B26322898F8D00CAE1AA /* HGRegSetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGRegSetView.h; sourceTree = "<group>"; };
-		F326B26422898F8D00CAE1AA /* HGRegSetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGRegSetView.m; sourceTree = "<group>"; };
 		F326B2662289AAF400CAE1AA /* HGNetworkUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGNetworkUtils.h; sourceTree = "<group>"; };
 		F326B2672289AAF400CAE1AA /* HGNetworkUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGNetworkUtils.m; sourceTree = "<group>"; };
 		F326B2692289AF4300CAE1AA /* HGAddressBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGAddressBook.h; sourceTree = "<group>"; };
-		F332A82C2285E05C00D459AD /* HGPersonalTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGPersonalTabView.h; sourceTree = "<group>"; };
-		F332A82D2285E05C00D459AD /* HGPersonalTabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGPersonalTabView.m; sourceTree = "<group>"; };
-		F332A82F2285E10F00D459AD /* HGPersonalTabCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGPersonalTabCell.h; sourceTree = "<group>"; };
-		F332A8302285E10F00D459AD /* HGPersonalTabCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGPersonalTabCell.m; sourceTree = "<group>"; };
-		F3831A8222896C0700431A67 /* HGForgetMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGForgetMainController.h; sourceTree = "<group>"; };
-		F3831A8322896C0700431A67 /* HGForgetMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGForgetMainController.m; sourceTree = "<group>"; };
-		F3831A8522896C1800431A67 /* HGForgetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGForgetView.h; sourceTree = "<group>"; };
-		F3831A8622896C1800431A67 /* HGForgetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGForgetView.m; sourceTree = "<group>"; };
-		F3831A8822896C9800431A67 /* HGRegisterMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGRegisterMainController.h; sourceTree = "<group>"; };
-		F3831A8922896C9800431A67 /* HGRegisterMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGRegisterMainController.m; sourceTree = "<group>"; };
-		F3831A8B22896CAC00431A67 /* HGRegSetMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGRegSetMainController.h; sourceTree = "<group>"; };
-		F3831A8C22896CAC00431A67 /* HGRegSetMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGRegSetMainController.m; sourceTree = "<group>"; };
-		F3831A8E22896CBE00431A67 /* HGRegisterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGRegisterView.h; sourceTree = "<group>"; };
-		F3831A8F22896CBE00431A67 /* HGRegisterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGRegisterView.m; sourceTree = "<group>"; };
 		F392C8A9228C0F1D007655DE /* HGExpressTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGExpressTools.h; sourceTree = "<group>"; };
 		F392C8AA228C0F1D007655DE /* HGExpressTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGExpressTools.m; sourceTree = "<group>"; };
 		F39424A7228D478700546C90 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		F39424A8228D478700546C90 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
-		F3AB7597228E677900D273E5 /* HGUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGUserInfoModel.h; sourceTree = "<group>"; };
-		F3AB7598228E677900D273E5 /* HGUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGUserInfoModel.m; sourceTree = "<group>"; };
 		F3BA2826228A6BDA00103778 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F3BA2828228A6BE300103778 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		F3BA282A228A6BEC00103778 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -129,12 +111,42 @@
 		F3BA2832228A6C2E00103778 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F3BA2834228A6C3600103778 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F3C7326E22867977006DA61C /* defaulthead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaulthead@2x.png"; sourceTree = "<group>"; };
-		F3CEC13622886D530022161D /* HGLoginMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGLoginMainController.h; sourceTree = "<group>"; };
-		F3CEC13722886D530022161D /* HGLoginMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGLoginMainController.m; sourceTree = "<group>"; };
-		F3CEC13922886D6C0022161D /* HGLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGLoginView.h; sourceTree = "<group>"; };
-		F3CEC13A22886D6C0022161D /* HGLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGLoginView.m; sourceTree = "<group>"; };
 		F3CEC13C228870CB0022161D /* UIButton+HGButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+HGButton.h"; sourceTree = "<group>"; };
 		F3CEC13D228870CB0022161D /* UIButton+HGButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HGButton.m"; sourceTree = "<group>"; };
+		F3D6ADC422925D1000F66070 /* HGLoginMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLoginMainController.m; sourceTree = "<group>"; };
+		F3D6ADC522925D1000F66070 /* HGLoginMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLoginMainController.h; sourceTree = "<group>"; };
+		F3D6ADC722925DB200F66070 /* HGAdviceFeedMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGAdviceFeedMainController.h; sourceTree = "<group>"; };
+		F3D6ADC822925DB200F66070 /* HGAdviceFeedMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGAdviceFeedMainController.m; sourceTree = "<group>"; };
+		F3D6ADCA2292794400F66070 /* HGAdviceFeedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGAdviceFeedView.h; sourceTree = "<group>"; };
+		F3D6ADCB2292794400F66070 /* HGAdviceFeedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGAdviceFeedView.m; sourceTree = "<group>"; };
+		F3DC312022925BBD00E42C91 /* HGCateMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGCateMainController.m; sourceTree = "<group>"; };
+		F3DC312122925BBD00E42C91 /* HGCateMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGCateMainController.h; sourceTree = "<group>"; };
+		F3DC312722925C0A00E42C91 /* HGHomeMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGHomeMainController.m; sourceTree = "<group>"; };
+		F3DC312822925C0A00E42C91 /* HGHomeMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGHomeMainController.h; sourceTree = "<group>"; };
+		F3DC312E22925C1100E42C91 /* HGPersonalMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGPersonalMainController.h; sourceTree = "<group>"; };
+		F3DC312F22925C1100E42C91 /* HGPersonalMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGPersonalMainController.m; sourceTree = "<group>"; };
+		F3DC313222925C1100E42C91 /* HGPersonalTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGPersonalTabCell.m; sourceTree = "<group>"; };
+		F3DC313322925C1100E42C91 /* HGPersonalHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGPersonalHeaderView.m; sourceTree = "<group>"; };
+		F3DC313422925C1100E42C91 /* HGPersonalTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGPersonalTabView.m; sourceTree = "<group>"; };
+		F3DC313522925C1100E42C91 /* HGPersonalTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGPersonalTabCell.h; sourceTree = "<group>"; };
+		F3DC313622925C1100E42C91 /* HGPersonalTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGPersonalTabView.h; sourceTree = "<group>"; };
+		F3DC313722925C1100E42C91 /* HGPersonalHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGPersonalHeaderView.h; sourceTree = "<group>"; };
+		F3DC313E22925C1A00E42C91 /* HGForgetMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGForgetMainController.h; sourceTree = "<group>"; };
+		F3DC314022925C1A00E42C91 /* HGRegSetMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGRegSetMainController.h; sourceTree = "<group>"; };
+		F3DC314122925C1A00E42C91 /* HGRegisterMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGRegisterMainController.m; sourceTree = "<group>"; };
+		F3DC314322925C1A00E42C91 /* HGForgetMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGForgetMainController.m; sourceTree = "<group>"; };
+		F3DC314422925C1A00E42C91 /* HGRegSetMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGRegSetMainController.m; sourceTree = "<group>"; };
+		F3DC314522925C1A00E42C91 /* HGRegisterMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGRegisterMainController.h; sourceTree = "<group>"; };
+		F3DC314722925C1A00E42C91 /* HGUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGUserInfoModel.m; sourceTree = "<group>"; };
+		F3DC314822925C1A00E42C91 /* HGUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGUserInfoModel.h; sourceTree = "<group>"; };
+		F3DC314A22925C1A00E42C91 /* HGRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGRegisterView.m; sourceTree = "<group>"; };
+		F3DC314B22925C1A00E42C91 /* HGLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLoginView.m; sourceTree = "<group>"; };
+		F3DC314C22925C1A00E42C91 /* HGForgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGForgetView.h; sourceTree = "<group>"; };
+		F3DC314D22925C1B00E42C91 /* HGRegSetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGRegSetView.h; sourceTree = "<group>"; };
+		F3DC314E22925C1B00E42C91 /* HGRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGRegisterView.h; sourceTree = "<group>"; };
+		F3DC314F22925C1B00E42C91 /* HGLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLoginView.h; sourceTree = "<group>"; };
+		F3DC315022925C1B00E42C91 /* HGForgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGForgetView.m; sourceTree = "<group>"; };
+		F3DC315122925C1B00E42C91 /* HGRegSetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGRegSetView.m; sourceTree = "<group>"; };
 		F3EE06452285532500F03534 /* HGReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HGReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EE064F2285532500F03534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3EE06512285532600F03534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,17 +167,11 @@
 		F3EE069B228555E700F03534 /* HGTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGTabBarController.m; sourceTree = "<group>"; };
 		F3EE06A32285568C00F03534 /* HGBaseMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGBaseMainController.h; sourceTree = "<group>"; };
 		F3EE06A42285568C00F03534 /* HGBaseMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGBaseMainController.m; sourceTree = "<group>"; };
-		F3EE06A6228556CE00F03534 /* HGCateMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGCateMainController.h; sourceTree = "<group>"; };
-		F3EE06A7228556CE00F03534 /* HGCateMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGCateMainController.m; sourceTree = "<group>"; };
-		F3EE06A92285570900F03534 /* HGHomeMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHomeMainController.h; sourceTree = "<group>"; };
-		F3EE06AA2285570900F03534 /* HGHomeMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHomeMainController.m; sourceTree = "<group>"; };
 		F3EE06AC228557F100F03534 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F3EE06B022855ADD00F03534 /* UIColor+HGColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+HGColor.h"; sourceTree = "<group>"; };
 		F3EE06B122855ADD00F03534 /* UIColor+HGColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HGColor.m"; sourceTree = "<group>"; };
 		F3EE06B32285622700F03534 /* HGMainNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGMainNavController.h; sourceTree = "<group>"; };
 		F3EE06B42285622700F03534 /* HGMainNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGMainNavController.m; sourceTree = "<group>"; };
-		F3EE06B6228562B900F03534 /* HGPersonalMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGPersonalMainController.h; sourceTree = "<group>"; };
-		F3EE06B7228562B900F03534 /* HGPersonalMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGPersonalMainController.m; sourceTree = "<group>"; };
 		F3EE06B92285644800F03534 /* UIImage+HGImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+HGImage.h"; sourceTree = "<group>"; };
 		F3EE06BA2285644800F03534 /* UIImage+HGImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HGImage.m"; sourceTree = "<group>"; };
 		F3EE06BD2285659B00F03534 /* btn_wd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_wd@2x.png"; sourceTree = "<group>"; };
@@ -260,6 +266,195 @@
 			path = SystemTools;
 			sourceTree = "<group>";
 		};
+		F3DC311A22925BAD00E42C91 /* AdviceFeed(意见反馈) */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC311B22925BAD00E42C91 /* Controller */,
+				F3DC311C22925BAD00E42C91 /* Model */,
+				F3DC311D22925BAD00E42C91 /* View */,
+			);
+			path = "AdviceFeed(意见反馈)";
+			sourceTree = "<group>";
+		};
+		F3DC311B22925BAD00E42C91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6ADC722925DB200F66070 /* HGAdviceFeedMainController.h */,
+				F3D6ADC822925DB200F66070 /* HGAdviceFeedMainController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3DC311C22925BAD00E42C91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3DC311D22925BAD00E42C91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6ADCA2292794400F66070 /* HGAdviceFeedView.h */,
+				F3D6ADCB2292794400F66070 /* HGAdviceFeedView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3DC311E22925BBD00E42C91 /* Category(分类) */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC311F22925BBD00E42C91 /* Controller */,
+				F3DC312222925BBD00E42C91 /* Model */,
+				F3DC312322925BBD00E42C91 /* View */,
+			);
+			path = "Category(分类)";
+			sourceTree = "<group>";
+		};
+		F3DC311F22925BBD00E42C91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC312022925BBD00E42C91 /* HGCateMainController.m */,
+				F3DC312122925BBD00E42C91 /* HGCateMainController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3DC312222925BBD00E42C91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3DC312322925BBD00E42C91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3DC312522925C0A00E42C91 /* Home(主页) */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC312622925C0A00E42C91 /* Controller */,
+				F3DC312922925C0A00E42C91 /* Model */,
+				F3DC312A22925C0A00E42C91 /* View */,
+			);
+			path = "Home(主页)";
+			sourceTree = "<group>";
+		};
+		F3DC312622925C0A00E42C91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC312722925C0A00E42C91 /* HGHomeMainController.m */,
+				F3DC312822925C0A00E42C91 /* HGHomeMainController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3DC312922925C0A00E42C91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3DC312A22925C0A00E42C91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3DC312C22925C1100E42C91 /* Personal(个人中心) */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC312D22925C1100E42C91 /* Controller */,
+				F3DC313022925C1100E42C91 /* Model */,
+				F3DC313122925C1100E42C91 /* View */,
+			);
+			path = "Personal(个人中心)";
+			sourceTree = "<group>";
+		};
+		F3DC312D22925C1100E42C91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC312E22925C1100E42C91 /* HGPersonalMainController.h */,
+				F3DC312F22925C1100E42C91 /* HGPersonalMainController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3DC313022925C1100E42C91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3DC313122925C1100E42C91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC313522925C1100E42C91 /* HGPersonalTabCell.h */,
+				F3DC313222925C1100E42C91 /* HGPersonalTabCell.m */,
+				F3DC313722925C1100E42C91 /* HGPersonalHeaderView.h */,
+				F3DC313322925C1100E42C91 /* HGPersonalHeaderView.m */,
+				F3DC313622925C1100E42C91 /* HGPersonalTabView.h */,
+				F3DC313422925C1100E42C91 /* HGPersonalTabView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3DC313C22925C1A00E42C91 /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC313D22925C1A00E42C91 /* Controller */,
+				F3DC314622925C1A00E42C91 /* Model */,
+				F3DC314922925C1A00E42C91 /* View */,
+			);
+			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
+		F3DC313D22925C1A00E42C91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3D6ADC522925D1000F66070 /* HGLoginMainController.h */,
+				F3D6ADC422925D1000F66070 /* HGLoginMainController.m */,
+				F3DC313E22925C1A00E42C91 /* HGForgetMainController.h */,
+				F3DC314022925C1A00E42C91 /* HGRegSetMainController.h */,
+				F3DC314122925C1A00E42C91 /* HGRegisterMainController.m */,
+				F3DC314322925C1A00E42C91 /* HGForgetMainController.m */,
+				F3DC314422925C1A00E42C91 /* HGRegSetMainController.m */,
+				F3DC314522925C1A00E42C91 /* HGRegisterMainController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3DC314622925C1A00E42C91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC314722925C1A00E42C91 /* HGUserInfoModel.m */,
+				F3DC314822925C1A00E42C91 /* HGUserInfoModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3DC314922925C1A00E42C91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC314C22925C1A00E42C91 /* HGForgetView.h */,
+				F3DC315022925C1B00E42C91 /* HGForgetView.m */,
+				F3DC314D22925C1B00E42C91 /* HGRegSetView.h */,
+				F3DC315122925C1B00E42C91 /* HGRegSetView.m */,
+				F3DC314E22925C1B00E42C91 /* HGRegisterView.h */,
+				F3DC314A22925C1A00E42C91 /* HGRegisterView.m */,
+				F3DC314F22925C1B00E42C91 /* HGLoginView.h */,
+				F3DC314B22925C1A00E42C91 /* HGLoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F3EE063C2285532500F03534 = {
 			isa = PBXGroup;
 			children = (
@@ -316,11 +511,12 @@
 		F3EE067A2285537A00F03534 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				F3EE068D2285545D00F03534 /* Category */,
+				F3DC313C22925C1A00E42C91 /* Login(登录) */,
+				F3DC312C22925C1100E42C91 /* Personal(个人中心) */,
+				F3DC312522925C0A00E42C91 /* Home(主页) */,
+				F3DC311E22925BBD00E42C91 /* Category(分类) */,
+				F3DC311A22925BAD00E42C91 /* AdviceFeed(意见反馈) */,
 				F3EE06992285545D00F03534 /* GlobalValue */,
-				F3EE06892285545D00F03534 /* Home */,
-				F3EE06952285545D00F03534 /* Login */,
-				F3EE06912285545D00F03534 /* Personal */,
 				F3EE06852285545D00F03534 /* Utils */,
 				F3EE067B2285537A00F03534 /* Main */,
 			);
@@ -415,160 +611,6 @@
 				F3EE06DF22857C1F00F03534 /* HGNetWordView.m */,
 			);
 			path = HUD;
-			sourceTree = "<group>";
-		};
-		F3EE06892285545D00F03534 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				F3EE068A2285545D00F03534 /* Controller */,
-				F3EE068B2285545D00F03534 /* Model */,
-				F3EE068C2285545D00F03534 /* View */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		F3EE068A2285545D00F03534 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F3EE06A92285570900F03534 /* HGHomeMainController.h */,
-				F3EE06AA2285570900F03534 /* HGHomeMainController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F3EE068B2285545D00F03534 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F3EE068C2285545D00F03534 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F3EE068D2285545D00F03534 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				F3EE068E2285545D00F03534 /* Controller */,
-				F3EE068F2285545D00F03534 /* Model */,
-				F3EE06902285545D00F03534 /* View */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		F3EE068E2285545D00F03534 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F3EE06A6228556CE00F03534 /* HGCateMainController.h */,
-				F3EE06A7228556CE00F03534 /* HGCateMainController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F3EE068F2285545D00F03534 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F3EE06902285545D00F03534 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F3EE06912285545D00F03534 /* Personal */ = {
-			isa = PBXGroup;
-			children = (
-				F3EE06922285545D00F03534 /* Controller */,
-				F3EE06932285545D00F03534 /* Model */,
-				F3EE06942285545D00F03534 /* View */,
-			);
-			path = Personal;
-			sourceTree = "<group>";
-		};
-		F3EE06922285545D00F03534 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F3EE06B6228562B900F03534 /* HGPersonalMainController.h */,
-				F3EE06B7228562B900F03534 /* HGPersonalMainController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F3EE06932285545D00F03534 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F3EE06942285545D00F03534 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F332A82C2285E05C00D459AD /* HGPersonalTabView.h */,
-				F332A82D2285E05C00D459AD /* HGPersonalTabView.m */,
-				F332A82F2285E10F00D459AD /* HGPersonalTabCell.h */,
-				F332A8302285E10F00D459AD /* HGPersonalTabCell.m */,
-				F318C0FF2286723C000D4D94 /* HGPersonalHeaderView.h */,
-				F318C1002286723C000D4D94 /* HGPersonalHeaderView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F3EE06952285545D00F03534 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				F3EE06962285545D00F03534 /* Controller */,
-				F3EE06972285545D00F03534 /* Model */,
-				F3EE06982285545D00F03534 /* View */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		F3EE06962285545D00F03534 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F3CEC13622886D530022161D /* HGLoginMainController.h */,
-				F3CEC13722886D530022161D /* HGLoginMainController.m */,
-				F3831A8222896C0700431A67 /* HGForgetMainController.h */,
-				F3831A8322896C0700431A67 /* HGForgetMainController.m */,
-				F3831A8822896C9800431A67 /* HGRegisterMainController.h */,
-				F3831A8922896C9800431A67 /* HGRegisterMainController.m */,
-				F3831A8B22896CAC00431A67 /* HGRegSetMainController.h */,
-				F3831A8C22896CAC00431A67 /* HGRegSetMainController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F3EE06972285545D00F03534 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F3AB7597228E677900D273E5 /* HGUserInfoModel.h */,
-				F3AB7598228E677900D273E5 /* HGUserInfoModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F3EE06982285545D00F03534 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F3CEC13922886D6C0022161D /* HGLoginView.h */,
-				F3CEC13A22886D6C0022161D /* HGLoginView.m */,
-				F3831A8522896C1800431A67 /* HGForgetView.h */,
-				F3831A8622896C1800431A67 /* HGForgetView.m */,
-				F3831A8E22896CBE00431A67 /* HGRegisterView.h */,
-				F3831A8F22896CBE00431A67 /* HGRegisterView.m */,
-				F326B26322898F8D00CAE1AA /* HGRegSetView.h */,
-				F326B26422898F8D00CAE1AA /* HGRegSetView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F3EE06992285545D00F03534 /* GlobalValue */ = {
@@ -780,39 +822,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				F39424A9228D478700546C90 /* RSA.m in Sources */,
+				F3DC313822925C1100E42C91 /* HGPersonalMainController.m in Sources */,
 				F3EE06DD228579EB00F03534 /* HGHUD.m in Sources */,
+				F3D6ADC622925D1000F66070 /* HGLoginMainController.m in Sources */,
+				F3DC312B22925C0A00E42C91 /* HGHomeMainController.m in Sources */,
 				F3EE06B222855ADD00F03534 /* UIColor+HGColor.m in Sources */,
 				F30E1AC62285E231007E91FA /* UILabel+HGLabel.m in Sources */,
-				F3CEC13822886D530022161D /* HGLoginMainController.m in Sources */,
+				F3DC315222925C1B00E42C91 /* HGRegisterMainController.m in Sources */,
 				F3EE06832285537A00F03534 /* main.m in Sources */,
-				F3831A9022896CBE00431A67 /* HGRegisterView.m in Sources */,
-				F3EE06AB2285570900F03534 /* HGHomeMainController.m in Sources */,
+				F3DC315A22925C1B00E42C91 /* HGRegSetView.m in Sources */,
 				F3CEC13E228870CB0022161D /* UIButton+HGButton.m in Sources */,
-				F332A8312285E10F00D459AD /* HGPersonalTabCell.m in Sources */,
-				F3CEC13B22886D6C0022161D /* HGLoginView.m in Sources */,
+				F3D6ADCC2292794400F66070 /* HGAdviceFeedView.m in Sources */,
+				F3DC315522925C1B00E42C91 /* HGRegSetMainController.m in Sources */,
 				F3EE06A52285568C00F03534 /* HGBaseMainController.m in Sources */,
 				F3EE06B52285622700F03534 /* HGMainNavController.m in Sources */,
 				F3EE06BB2285644800F03534 /* UIImage+HGImage.m in Sources */,
 				F318C0FE22867184000D4D94 /* UIScrollView+HeaderScaleImage.m in Sources */,
 				F3EE06E022857C1F00F03534 /* HGNetWordView.m in Sources */,
+				F3DC315722925C1B00E42C91 /* HGRegisterView.m in Sources */,
 				F3EE06822285537A00F03534 /* ViewController.m in Sources */,
-				F3EE06B8228562B900F03534 /* HGPersonalMainController.m in Sources */,
-				F3831A8722896C1800431A67 /* HGForgetView.m in Sources */,
-				F3831A8D22896CAC00431A67 /* HGRegSetMainController.m in Sources */,
-				F332A82E2285E05C00D459AD /* HGPersonalTabView.m in Sources */,
 				F326B2682289AAF400CAE1AA /* HGNetworkUtils.m in Sources */,
 				F392C8AB228C0F1D007655DE /* HGExpressTools.m in Sources */,
-				F318C1012286723C000D4D94 /* HGPersonalHeaderView.m in Sources */,
-				F3831A8A22896C9800431A67 /* HGRegisterMainController.m in Sources */,
-				F3EE06A8228556CE00F03534 /* HGCateMainController.m in Sources */,
-				F326B26522898F8D00CAE1AA /* HGRegSetView.m in Sources */,
+				F3DC315922925C1B00E42C91 /* HGForgetView.m in Sources */,
+				F3DC315422925C1B00E42C91 /* HGForgetMainController.m in Sources */,
+				F3DC312422925BBE00E42C91 /* HGCateMainController.m in Sources */,
+				F3DC313922925C1100E42C91 /* HGPersonalTabCell.m in Sources */,
 				F3EE069C228555E700F03534 /* HGTabBarController.m in Sources */,
-				F3AB7599228E677900D273E5 /* HGUserInfoModel.m in Sources */,
+				F3DC315822925C1B00E42C91 /* HGLoginView.m in Sources */,
+				F3DC313B22925C1100E42C91 /* HGPersonalTabView.m in Sources */,
 				F3EE06842285537A00F03534 /* AppDelegate.m in Sources */,
-				F3831A8422896C0700431A67 /* HGForgetMainController.m in Sources */,
+				F3DC315622925C1B00E42C91 /* HGUserInfoModel.m in Sources */,
 				F3EE06D122856ADE00F03534 /* UIView+HGView.m in Sources */,
 				F3EE06D8228570BE00F03534 /* UIBarButtonItem+HGBarButtonItem.m in Sources */,
 				F3EE06CE2285664E00F03534 /* HGTabBar.m in Sources */,
+				F3D6ADC922925DB200F66070 /* HGAdviceFeedMainController.m in Sources */,
+				F3DC313A22925C1100E42C91 /* HGPersonalHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,5 +28,7 @@
 // 更改密码
 #define UPDATEPASSWORD @"/api/updatepassword"
 
+// 更改密码
+#define ADDADVICE @"/api/addadvice"
 
 #endif /* HGAddressBook_h */
