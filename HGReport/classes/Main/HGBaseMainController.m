@@ -19,7 +19,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithHexString:HGWhiteGray];
     [self setUpNetConnectUtils];
-    [self setUpHudView];
 }
 
 #pragma mark - 初始化网络连接对象
@@ -27,13 +26,6 @@
 - (void) setUpNetConnectUtils
 {
     self.Connection = [[HGNetworkUtils alloc] init];
-}
-
-#pragma mark - 初始化HUD对象
-
-- (void) setUpHudView
-{
-    self.HUD = [[HGHUD alloc] initWithView:self.view];
 }
 
 

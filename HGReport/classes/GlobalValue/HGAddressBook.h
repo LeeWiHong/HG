@@ -27,8 +27,10 @@
 #define LOGINOUT @"/api/loginout"
 // 更改密码
 #define UPDATEPASSWORD @"/api/updatepassword"
-
 // 更改密码
 #define ADDADVICE @"/api/addadvice"
+// 所有分类
+#define ALLCATEGORY @"/api/allcategory"
+
 
 #endif /* HGAddressBook_h */

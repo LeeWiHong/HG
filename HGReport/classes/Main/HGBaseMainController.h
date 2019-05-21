@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,strong) HGNetworkUtils *Connection;
 
-@property(nonatomic,strong) HGHUD *HUD;
 
 
 @end

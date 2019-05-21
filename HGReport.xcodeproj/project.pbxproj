@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F307F307229395F100DED84D /* android@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F307F306229395F100DED84D /* android@2x.png */; };
 		F30E1AC62285E231007E91FA /* UILabel+HGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F30E1AC52285E231007E91FA /* UILabel+HGLabel.m */; };
 		F30E1AC82285E559007E91FA /* icon_enter2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F30E1AC72285E558007E91FA /* icon_enter2@2x.png */; };
 		F318C0FE22867184000D4D94 /* UIScrollView+HeaderScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F318C0FC22867184000D4D94 /* UIScrollView+HeaderScaleImage.m */; };
@@ -92,6 +93,7 @@
 /* Begin PBXFileReference section */
 		05A1164591F3513505EEAFC2 /* Pods-HGReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HGReport/Pods-HGReport.debug.xcconfig"; sourceTree = "<group>"; };
 		143842FE5D00F58015F1E9CB /* libPods-HGReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HGReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F307F306229395F100DED84D /* android@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "android@2x.png"; sourceTree = "<group>"; };
 		F30E1AC42285E231007E91FA /* UILabel+HGLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+HGLabel.h"; sourceTree = "<group>"; };
 		F30E1AC52285E231007E91FA /* UILabel+HGLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HGLabel.m"; sourceTree = "<group>"; };
 		F30E1AC72285E558007E91FA /* icon_enter2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_enter2@2x.png"; sourceTree = "<group>"; };
@@ -556,6 +558,7 @@
 		F3EE06812285537A00F03534 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F307F306229395F100DED84D /* android@2x.png */,
 				F3C7326E22867977006DA61C /* defaulthead@2x.png */,
 				F30E1AC72285E558007E91FA /* icon_enter2@2x.png */,
 				F3EE06D92285729D00F03534 /* btn_back@2x.png */,
@@ -739,6 +742,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F307F307229395F100DED84D /* android@2x.png in Resources */,
 				F3EE06DA2285729E00F03534 /* btn_back@2x.png in Resources */,
 				F3EE06552285532600F03534 /* LaunchScreen.storyboard in Resources */,
 				F3EE06CA2285659C00F03534 /* btn_sy@2x.png in Resources */,

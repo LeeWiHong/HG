@@ -38,25 +38,25 @@ NSString *CateItem = @"HGCateCollectionCell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake((HGWidth- 80 * HGAutoWidth) / 3, 360 * HGAutoHeight);
-    
+    return CGSizeMake(200 * HGAutoWidth, 260 * HGAutoHeight);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(0, 0, (self.CateArray.count / 3 - 2) * HGWidth / 3, 0);//（上、左、下、右）
+    return UIEdgeInsetsMake(10, (HGWidth - (200 * HGAutoWidth) * 3) / 4, 10, (HGWidth - (200 * HGAutoWidth) * 3) / 4);
 }
+
 
 #pragma mark  定义每个UICollectionView的横向间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 0;
+    return (HGWidth - (200 * HGAutoWidth) * 3) / 4;
 }
 
 #pragma mark  定义每个UICollectionView的纵向间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 0;
+    return 20 * HGAutoWidth;
 }
 
 #pragma mark  点击CollectionView触发事件
@@ -68,13 +68,8 @@ NSString *CateItem = @"HGCateCollectionCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HGCateCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CateItem forIndexPath:indexPath];
-    cell.ItemImage.image = [UIImage imageNamed:@"defaulthead"];
-    cell.ItemLabel.text = @"Android";
     return cell;
 }
-
-
-
 
 
 

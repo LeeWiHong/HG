@@ -16,9 +16,10 @@
 
 @implementation HGCateCollectionCell
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self == [super init]) {
+    if (self == [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor colorWithHexString:HGWhite];
         [self setUpCateCollectionItem];
     }
     return self;
@@ -29,7 +30,8 @@
 - (void) setUpCateCollectionItem
 {
     UIImageView *ItemImage = [[UIImageView alloc] init];
-    ItemImage.image = [UIImage imageNamed:@"defaulthead"];
+    ItemImage.contentMode = UIViewContentModeScaleAspectFit;
+    [ItemImage sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"android"]];
     self.ItemImage = ItemImage;
     [self addSubview:ItemImage];
     
@@ -37,7 +39,7 @@
         make.top.equalTo(self.top).offset(0);
         make.left.equalTo(self.left).offset(0);
         make.right.equalTo(self.right).offset(0);
-        make.width.mas_equalTo(self.height);
+        make.height.mas_equalTo(self.width);
     }];
     
     UILabel *ItemLabel = [UILabel LabelWithFone:14 Color:HGBlack];
