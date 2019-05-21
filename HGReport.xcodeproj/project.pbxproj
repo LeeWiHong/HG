@@ -11,6 +11,8 @@
 		F30E1AC82285E559007E91FA /* icon_enter2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F30E1AC72285E558007E91FA /* icon_enter2@2x.png */; };
 		F318C0FE22867184000D4D94 /* UIScrollView+HeaderScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F318C0FC22867184000D4D94 /* UIScrollView+HeaderScaleImage.m */; };
 		F326B2682289AAF400CAE1AA /* HGNetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F326B2672289AAF400CAE1AA /* HGNetworkUtils.m */; };
+		F37B9B7C22930FAA00FBAA28 /* HGCateCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B9B7B22930FAA00FBAA28 /* HGCateCollectionView.m */; };
+		F37B9B7F2293117800FBAA28 /* HGCateCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B9B7E2293117800FBAA28 /* HGCateCollectionCell.m */; };
 		F392C8AB228C0F1D007655DE /* HGExpressTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F392C8AA228C0F1D007655DE /* HGExpressTools.m */; };
 		F39424A9228D478700546C90 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = F39424A7228D478700546C90 /* RSA.m */; };
 		F3BA2827228A6BDA00103778 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BA2826228A6BDA00103778 /* libz.tbd */; };
@@ -98,6 +100,10 @@
 		F326B2662289AAF400CAE1AA /* HGNetworkUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGNetworkUtils.h; sourceTree = "<group>"; };
 		F326B2672289AAF400CAE1AA /* HGNetworkUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGNetworkUtils.m; sourceTree = "<group>"; };
 		F326B2692289AF4300CAE1AA /* HGAddressBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGAddressBook.h; sourceTree = "<group>"; };
+		F37B9B7A22930FAA00FBAA28 /* HGCateCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGCateCollectionView.h; sourceTree = "<group>"; };
+		F37B9B7B22930FAA00FBAA28 /* HGCateCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGCateCollectionView.m; sourceTree = "<group>"; };
+		F37B9B7D2293117800FBAA28 /* HGCateCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGCateCollectionCell.h; sourceTree = "<group>"; };
+		F37B9B7E2293117800FBAA28 /* HGCateCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGCateCollectionCell.m; sourceTree = "<group>"; };
 		F392C8A9228C0F1D007655DE /* HGExpressTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGExpressTools.h; sourceTree = "<group>"; };
 		F392C8AA228C0F1D007655DE /* HGExpressTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGExpressTools.m; sourceTree = "<group>"; };
 		F39424A7228D478700546C90 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
@@ -314,8 +320,8 @@
 		F3DC311F22925BBD00E42C91 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F3DC312022925BBD00E42C91 /* HGCateMainController.m */,
 				F3DC312122925BBD00E42C91 /* HGCateMainController.h */,
+				F3DC312022925BBD00E42C91 /* HGCateMainController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +336,10 @@
 		F3DC312322925BBD00E42C91 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F37B9B7A22930FAA00FBAA28 /* HGCateCollectionView.h */,
+				F37B9B7B22930FAA00FBAA28 /* HGCateCollectionView.m */,
+				F37B9B7D2293117800FBAA28 /* HGCateCollectionCell.h */,
+				F37B9B7E2293117800FBAA28 /* HGCateCollectionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -834,6 +844,7 @@
 				F3CEC13E228870CB0022161D /* UIButton+HGButton.m in Sources */,
 				F3D6ADCC2292794400F66070 /* HGAdviceFeedView.m in Sources */,
 				F3DC315522925C1B00E42C91 /* HGRegSetMainController.m in Sources */,
+				F37B9B7F2293117800FBAA28 /* HGCateCollectionCell.m in Sources */,
 				F3EE06A52285568C00F03534 /* HGBaseMainController.m in Sources */,
 				F3EE06B52285622700F03534 /* HGMainNavController.m in Sources */,
 				F3EE06BB2285644800F03534 /* UIImage+HGImage.m in Sources */,
@@ -845,6 +856,7 @@
 				F392C8AB228C0F1D007655DE /* HGExpressTools.m in Sources */,
 				F3DC315922925C1B00E42C91 /* HGForgetView.m in Sources */,
 				F3DC315422925C1B00E42C91 /* HGForgetMainController.m in Sources */,
+				F37B9B7C22930FAA00FBAA28 /* HGCateCollectionView.m in Sources */,
 				F3DC312422925BBE00E42C91 /* HGCateMainController.m in Sources */,
 				F3DC313922925C1100E42C91 /* HGPersonalTabCell.m in Sources */,
 				F3EE069C228555E700F03534 /* HGTabBarController.m in Sources */,

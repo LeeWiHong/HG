@@ -7,6 +7,7 @@
 //
 
 #import "HGCateMainController.h"
+#import "HGCateCollectionView.h"
 
 @interface HGCateMainController ()
 
@@ -17,8 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"分类";
+    self.view.backgroundColor = [UIColor colorWithHexString:HGWhite];
+    [self setUpCategoryBodyView];
     
-    
+}
+
+#pragma mark - 初始化分类视图
+
+- (void) setUpCategoryBodyView
+{
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    //设置CollectionView的属性
+    HGCateCollectionView *CateView = [[HGCateCollectionView alloc] initWithFrame:CGRectMake(0, 0, HGWidth, HGHeight) collectionViewLayout:flowLayout];
+    CateView.backgroundColor = [UIColor colorWithHexString:HGWhite];
+    [self.view addSubview:CateView];
 }
 
 
