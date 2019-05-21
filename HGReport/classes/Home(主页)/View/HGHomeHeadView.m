@@ -13,9 +13,17 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self == [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor greenColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
+}
+
+#pragma mark - 加入轮播
+
+- (void) setUpHeadCycleView
+{
+
+    
 }
 
 

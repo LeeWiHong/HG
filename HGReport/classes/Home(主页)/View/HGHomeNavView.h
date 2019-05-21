@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HGHomeNavView : UIView
 
+@property(nonatomic,weak) UIView *NavPlaceView;
 @end
 
 NS_ASSUME_NONNULL_END

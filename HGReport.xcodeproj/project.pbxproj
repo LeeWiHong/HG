@@ -10,7 +10,6 @@
 		F307F307229395F100DED84D /* android@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F307F306229395F100DED84D /* android@2x.png */; };
 		F307F30A2293AEFD00DED84D /* HGCateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F3092293AEFD00DED84D /* HGCateModel.m */; };
 		F307F30D2293D95200DED84D /* HGHomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F30C2293D95200DED84D /* HGHomeNavView.m */; };
-		F307F3102293DD1100DED84D /* HGHomeTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F30F2293DD1100DED84D /* HGHomeTabView.m */; };
 		F307F3132293DD2900DED84D /* HGHomeTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F3122293DD2900DED84D /* HGHomeTabCell.m */; };
 		F30E1AC62285E231007E91FA /* UILabel+HGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F30E1AC52285E231007E91FA /* UILabel+HGLabel.m */; };
 		F30E1AC82285E559007E91FA /* icon_enter2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F30E1AC72285E558007E91FA /* icon_enter2@2x.png */; };
@@ -103,8 +102,6 @@
 		F307F3092293AEFD00DED84D /* HGCateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGCateModel.m; sourceTree = "<group>"; };
 		F307F30B2293D95200DED84D /* HGHomeNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHomeNavView.h; sourceTree = "<group>"; };
 		F307F30C2293D95200DED84D /* HGHomeNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHomeNavView.m; sourceTree = "<group>"; };
-		F307F30E2293DD1100DED84D /* HGHomeTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHomeTabView.h; sourceTree = "<group>"; };
-		F307F30F2293DD1100DED84D /* HGHomeTabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHomeTabView.m; sourceTree = "<group>"; };
 		F307F3112293DD2900DED84D /* HGHomeTabCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGHomeTabCell.h; sourceTree = "<group>"; };
 		F307F3122293DD2900DED84D /* HGHomeTabCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHomeTabCell.m; sourceTree = "<group>"; };
 		F30E1AC42285E231007E91FA /* UILabel+HGLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+HGLabel.h"; sourceTree = "<group>"; };
@@ -394,8 +391,6 @@
 			children = (
 				F307F30B2293D95200DED84D /* HGHomeNavView.h */,
 				F307F30C2293D95200DED84D /* HGHomeNavView.m */,
-				F307F30E2293DD1100DED84D /* HGHomeTabView.h */,
-				F307F30F2293DD1100DED84D /* HGHomeTabView.m */,
 				F307F3112293DD2900DED84D /* HGHomeTabCell.h */,
 				F307F3122293DD2900DED84D /* HGHomeTabCell.m */,
 				F395060D2293EB4300AC22CB /* HGHomeHeadView.h */,
@@ -873,7 +868,6 @@
 				F3DC315A22925C1B00E42C91 /* HGRegSetView.m in Sources */,
 				F3CEC13E228870CB0022161D /* UIButton+HGButton.m in Sources */,
 				F3D6ADCC2292794400F66070 /* HGAdviceFeedView.m in Sources */,
-				F307F3102293DD1100DED84D /* HGHomeTabView.m in Sources */,
 				F3DC315522925C1B00E42C91 /* HGRegSetMainController.m in Sources */,
 				F37B9B7F2293117800FBAA28 /* HGCateCollectionCell.m in Sources */,
 				F3EE06A52285568C00F03534 /* HGBaseMainController.m in Sources */,

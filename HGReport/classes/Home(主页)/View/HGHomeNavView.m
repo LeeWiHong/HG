@@ -13,6 +13,7 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self == [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor colorWithHexString:HGRED];
         [self setUpHomeNavView];
     }
     return self;
@@ -23,6 +24,8 @@
 - (void) setUpHomeNavView
 {
     UIView *NavPlaceView = [[UIView alloc] init];
+    NavPlaceView.backgroundColor = [UIColor clearColor];
+    self.NavPlaceView = NavPlaceView;
     [self addSubview:NavPlaceView];
     
     [NavPlaceView makeConstraints:^(MASConstraintMaker *make) {
