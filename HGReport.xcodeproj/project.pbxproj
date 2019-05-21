@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F307F307229395F100DED84D /* android@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F307F306229395F100DED84D /* android@2x.png */; };
+		F307F30A2293AEFD00DED84D /* HGCateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F3092293AEFD00DED84D /* HGCateModel.m */; };
 		F30E1AC62285E231007E91FA /* UILabel+HGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F30E1AC52285E231007E91FA /* UILabel+HGLabel.m */; };
 		F30E1AC82285E559007E91FA /* icon_enter2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F30E1AC72285E558007E91FA /* icon_enter2@2x.png */; };
 		F318C0FE22867184000D4D94 /* UIScrollView+HeaderScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F318C0FC22867184000D4D94 /* UIScrollView+HeaderScaleImage.m */; };
@@ -94,6 +95,8 @@
 		05A1164591F3513505EEAFC2 /* Pods-HGReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HGReport/Pods-HGReport.debug.xcconfig"; sourceTree = "<group>"; };
 		143842FE5D00F58015F1E9CB /* libPods-HGReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HGReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F307F306229395F100DED84D /* android@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "android@2x.png"; sourceTree = "<group>"; };
+		F307F3082293AEFD00DED84D /* HGCateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGCateModel.h; sourceTree = "<group>"; };
+		F307F3092293AEFD00DED84D /* HGCateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGCateModel.m; sourceTree = "<group>"; };
 		F30E1AC42285E231007E91FA /* UILabel+HGLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+HGLabel.h"; sourceTree = "<group>"; };
 		F30E1AC52285E231007E91FA /* UILabel+HGLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HGLabel.m"; sourceTree = "<group>"; };
 		F30E1AC72285E558007E91FA /* icon_enter2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_enter2@2x.png"; sourceTree = "<group>"; };
@@ -331,6 +334,8 @@
 		F3DC312222925BBD00E42C91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F307F3082293AEFD00DED84D /* HGCateModel.h */,
+				F307F3092293AEFD00DED84D /* HGCateModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -864,6 +869,7 @@
 				F3DC312422925BBE00E42C91 /* HGCateMainController.m in Sources */,
 				F3DC313922925C1100E42C91 /* HGPersonalTabCell.m in Sources */,
 				F3EE069C228555E700F03534 /* HGTabBarController.m in Sources */,
+				F307F30A2293AEFD00DED84D /* HGCateModel.m in Sources */,
 				F3DC315822925C1B00E42C91 /* HGLoginView.m in Sources */,
 				F3DC313B22925C1100E42C91 /* HGPersonalTabView.m in Sources */,
 				F3EE06842285537A00F03534 /* AppDelegate.m in Sources */,

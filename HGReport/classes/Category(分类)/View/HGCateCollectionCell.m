@@ -7,10 +7,13 @@
 //
 
 #import "HGCateCollectionCell.h"
+#import "HGCateModel.h"
 
 @interface HGCateCollectionCell ()
 
+@property(nonatomic,weak) UIImageView *ItemImage;
 
+@property(nonatomic,weak) UILabel *ItemLabel;
 
 @end
 
@@ -51,7 +54,12 @@
         make.centerX.equalTo(self.centerX).offset(0);
         make.top.equalTo(ItemImage.bottom).offset(20 * HGAutoHeight);
     }];
-    
+}
+
+- (void)setCateModel:(HGCateModel *)CateModel
+{
+    [self.ItemImage sd_setImageWithURL:[NSURL URLWithString:[WEBURL stringByAppendingString:CateModel.categoryImage]] placeholderImage:[UIImage imageNamed:@"android"]];
+    self.ItemLabel.text = CateModel.categoryName;
 }
 
 @end

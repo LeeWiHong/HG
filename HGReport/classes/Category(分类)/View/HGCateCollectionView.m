@@ -33,7 +33,7 @@ NSString *CateItem = @"HGCateCollectionCell";
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return self.CateArray.count;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -68,6 +68,8 @@ NSString *CateItem = @"HGCateCollectionCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HGCateCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CateItem forIndexPath:indexPath];
+    HGCateModel *CateModel = self.CateArray[indexPath.row];
+    cell.CateModel = CateModel;
     return cell;
 }
 

@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class HGCateModel;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HGCateCollectionCell : UICollectionViewCell
 
-@property(nonatomic,weak) UIImageView *ItemImage;
-
-@property(nonatomic,weak) UILabel *ItemLabel;
+@property(nonatomic,weak) HGCateModel *CateModel;
 
 @end
 
