@@ -31,6 +31,9 @@
 #define ADDADVICE @"/api/addadvice"
 // 所有分类
 #define ALLCATEGORY @"/api/allcategory"
+// 首页所有文章
+#define INDEXARTICLE @"/api/indexarticle"
+
 
 
 #endif /* HGAddressBook_h */

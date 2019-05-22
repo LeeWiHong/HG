@@ -9,12 +9,16 @@
 #import "HGHomeMainController.h"
 #import "HGHomeNavView.h"
 #import "HGHomeTabCell.h"
+#import "HGIndexModel.h"
 
 @interface HGHomeMainController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,weak) UITableView *HomeTabView;
 
 @property(nonatomic,weak) HGHomeNavView *HomeNavView;
+
+@property(nonatomic,strong) NSMutableArray *IndexArray;
+
 
 @end
 
@@ -26,14 +30,31 @@ NSString *HomeCell = @"HGHomeTabCell";
     [super viewDidLoad];
     self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = [UIColor colorWithHexString:HGWhite];
-    
-    [self setUpHomeBodyView];
-    
+    [self ConnectGetIndexData];
+}
+
+#pragma mark - 网络请求首页数据
+
+- (void) ConnectGetIndexData
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"%d",1] forKey:@"pageno"];
+    [dict setValue:[NSString stringWithFormat:@"%d",10] forKey:@"pagesize"];
+    [self.Connection ConnectWithMeThod:GET Url:INDEXARTICLE Parameters:dict Success:^(NSDictionary *data) {
+        if ([[data valueForKey:@"success"] boolValue]) {
+            self.IndexArray = [HGIndexModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]];
+            [self setUpHomeBodyViewWithArray:self.IndexArray];
+        } else {
+            
+        }
+    } Failure:^(NSError *error) {
+        
+    }];
 }
 
 #pragma mark - 初始化视图
 
-- (void) setUpHomeBodyView
+- (void) setUpHomeBodyViewWithArray:(NSMutableArray *)IndexArray
 {
     UITableView *HomeTabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, HGWidth, HGHeight) style:UITableViewStylePlain];
     HomeTabView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
@@ -50,11 +71,11 @@ NSString *HomeCell = @"HGHomeTabCell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.IndexArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,6 +90,8 @@ NSString *HomeCell = @"HGHomeTabCell";
         cell = [[HGHomeTabCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:HomeCell];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    HGIndexModel *IndexModel = self.IndexArray[indexPath.row];
+    cell.IndexModel = IndexModel;
     return cell;
 }
 

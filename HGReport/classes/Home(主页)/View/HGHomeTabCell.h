@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HGIndexModel;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HGHomeTabCell : UITableViewCell
 
+@property(nonatomic,weak) HGIndexModel *IndexModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,7 @@
 //
 
 #import "HGHomeTabCell.h"
+#import "HGIndexModel.h"
 
 @interface HGHomeTabCell ()
 
@@ -88,7 +89,14 @@
         make.right.equalTo(self.right).offset(0);
         make.height.mas_equalTo(1);
     }];
-    
+}
+
+- (void)setIndexModel:(HGIndexModel *)IndexModel
+{
+    [self.ArticleImage sd_setImageWithURL:[NSURL URLWithString:[WEBURL stringByAppendingString:IndexModel.articleImage]] placeholderImage:[UIImage imageNamed:@"android"]];
+    self.ArticleTitle.text = IndexModel.articleTitle;
+    self.ArticleCat.text = [NSString stringWithFormat:@"%ld",IndexModel.articleCategory];
+    self.PlatLabel.text = [NSString stringWithFormat:@"%ld",IndexModel.articlePlatform];
 }
 
 @end

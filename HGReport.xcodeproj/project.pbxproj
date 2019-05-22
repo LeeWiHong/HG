@@ -13,6 +13,7 @@
 		F307F3132293DD2900DED84D /* HGHomeTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F3122293DD2900DED84D /* HGHomeTabCell.m */; };
 		F30E1AC62285E231007E91FA /* UILabel+HGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F30E1AC52285E231007E91FA /* UILabel+HGLabel.m */; };
 		F30E1AC82285E559007E91FA /* icon_enter2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F30E1AC72285E558007E91FA /* icon_enter2@2x.png */; };
+		F3167DA12294F56B00C8046F /* HGIndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3167DA02294F56B00C8046F /* HGIndexModel.m */; };
 		F318C0FE22867184000D4D94 /* UIScrollView+HeaderScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F318C0FC22867184000D4D94 /* UIScrollView+HeaderScaleImage.m */; };
 		F326B2682289AAF400CAE1AA /* HGNetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F326B2672289AAF400CAE1AA /* HGNetworkUtils.m */; };
 		F37B9B7C22930FAA00FBAA28 /* HGCateCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B9B7B22930FAA00FBAA28 /* HGCateCollectionView.m */; };
@@ -107,6 +108,8 @@
 		F30E1AC42285E231007E91FA /* UILabel+HGLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+HGLabel.h"; sourceTree = "<group>"; };
 		F30E1AC52285E231007E91FA /* UILabel+HGLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HGLabel.m"; sourceTree = "<group>"; };
 		F30E1AC72285E558007E91FA /* icon_enter2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_enter2@2x.png"; sourceTree = "<group>"; };
+		F3167D9F2294F56B00C8046F /* HGIndexModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGIndexModel.h; sourceTree = "<group>"; };
+		F3167DA02294F56B00C8046F /* HGIndexModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGIndexModel.m; sourceTree = "<group>"; };
 		F318C0FC22867184000D4D94 /* UIScrollView+HeaderScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HeaderScaleImage.m"; sourceTree = "<group>"; };
 		F318C0FD22867184000D4D94 /* UIScrollView+HeaderScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HeaderScaleImage.h"; sourceTree = "<group>"; };
 		F326B2662289AAF400CAE1AA /* HGNetworkUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGNetworkUtils.h; sourceTree = "<group>"; };
@@ -382,6 +385,8 @@
 		F3DC312922925C0A00E42C91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3167D9F2294F56B00C8046F /* HGIndexModel.h */,
+				F3167DA02294F56B00C8046F /* HGIndexModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -875,6 +880,7 @@
 				F3EE06BB2285644800F03534 /* UIImage+HGImage.m in Sources */,
 				F318C0FE22867184000D4D94 /* UIScrollView+HeaderScaleImage.m in Sources */,
 				F3EE06E022857C1F00F03534 /* HGNetWordView.m in Sources */,
+				F3167DA12294F56B00C8046F /* HGIndexModel.m in Sources */,
 				F3DC315722925C1B00E42C91 /* HGRegisterView.m in Sources */,
 				F3EE06822285537A00F03534 /* ViewController.m in Sources */,
 				F326B2682289AAF400CAE1AA /* HGNetworkUtils.m in Sources */,
