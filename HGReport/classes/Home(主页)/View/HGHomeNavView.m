@@ -27,18 +27,18 @@
     NavPlaceView.backgroundColor = [UIColor clearColor];
     self.NavPlaceView = NavPlaceView;
     [self addSubview:NavPlaceView];
-    
+
     [NavPlaceView makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.left).offset(0);
         make.bottom.equalTo(self.bottom).offset(0);
         make.right.equalTo(self.right).offset(0);
         make.height.mas_equalTo(44);
     }];
-    
+
     UILabel *NavLabel = [UILabel LabelWithFone:18 Color:HGWhite];
     NavLabel.text = @"鸿哥日报";
     [NavPlaceView addSubview:NavLabel];
-    
+
     [NavLabel makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(NavPlaceView.centerX).offset(0);
         make.centerY.equalTo(NavPlaceView.centerY).offset(0);

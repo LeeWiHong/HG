@@ -8,7 +8,6 @@
 
 #import "HGHomeMainController.h"
 #import "HGHomeNavView.h"
-#import "HGHomeHeadView.h"
 #import "HGHomeTabCell.h"
 
 @interface HGHomeMainController ()<UITableViewDelegate,UITableViewDataSource>
@@ -36,8 +35,8 @@ NSString *HomeCell = @"HGHomeTabCell";
 
 - (void) setUpHomeBodyView
 {
-    UITableView *HomeTabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, HGWidth, HGHeight - 64) style:UITableViewStylePlain];
-    HomeTabView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    UITableView *HomeTabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, HGWidth, HGHeight) style:UITableViewStylePlain];
+    HomeTabView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     HomeTabView.delegate = self;
     HomeTabView.dataSource = self;
     [HomeTabView registerClass:[HGHomeTabCell class] forCellReuseIdentifier:HomeCell];
@@ -49,7 +48,8 @@ NSString *HomeCell = @"HGHomeTabCell";
     [self.view addSubview:HomeNavView];
 }
 
-- (NSInteger)numberOfSections{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 4;
 }
 
@@ -77,11 +77,20 @@ NSString *HomeCell = @"HGHomeTabCell";
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat scrolloffset = scrollView.contentOffset.y;
-    if (scrolloffset >= 0 && scrolloffset <= 64) {
-        self.HomeNavView.layer.opacity = 1 - scrolloffset / 64;
-        NSLog(@"aaa%f",1 - scrolloffset / 64);
+    NSLog(@"eee%f",scrolloffset);
+    if (scrolloffset >= -84 && scrolloffset <= 0) {
+        self.HomeNavView.alpha = - scrolloffset / 84;
     }
+    else if (scrolloffset < -84)
+    {
+        self.HomeNavView.alpha = 1;
+    }
+    else if (scrolloffset >0){
+        self.HomeNavView.alpha = 0;
+    }
+    NSLog(@"bbb%f",self.HomeNavView.alpha);
 }
+
 
 
 @end

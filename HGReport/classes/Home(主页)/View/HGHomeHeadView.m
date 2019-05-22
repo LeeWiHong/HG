@@ -10,10 +10,10 @@
 
 @implementation HGHomeHeadView
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
-    if (self == [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor clearColor];
+    if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
+        self.backgroundColor = [UIColor greenColor];
     }
     return self;
 }
