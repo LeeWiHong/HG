@@ -19,6 +19,10 @@
 
 @property(nonatomic,strong) NSMutableArray *IndexArray;
 
+@property(nonatomic,assign) NSInteger pageno;
+
+@property(nonatomic,assign) NSInteger pages;
+
 
 @end
 
@@ -30,26 +34,76 @@ NSString *HomeCell = @"HGHomeTabCell";
     [super viewDidLoad];
     self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = [UIColor colorWithHexString:HGWhite];
-    [self ConnectGetIndexData];
+    _pageno = 1;
+    [self ConnectGetIndexDataWithNewView:YES RemoveData:NO];
+}
+
+#pragma mark - 刷新数据
+
+- (void) FreshHeadData
+{
+    self.pageno = 1;
+    [self ConnectGetIndexDataWithNewView:NO RemoveData:YES];
+}
+
+#pragma mark - 加载更多数据
+
+- (void) LoadMoreData
+{
+    _pageno = _pageno + 1;
+    if (_pageno <= _pages ) {
+        [self ConnectGetIndexDataWithNewView:NO RemoveData:NO];
+    }
+    else{
+        self.HomeTabView.mj_footer.state =  MJRefreshStateNoMoreData;
+    }
 }
 
 #pragma mark - 网络请求首页数据
 
-- (void) ConnectGetIndexData
+- (void) ConnectGetIndexDataWithNewView:(BOOL)NewView RemoveData:(BOOL)RemoveData
 {
+    HGHUD *hud = [[HGHUD alloc] initWithView:self.view];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setValue:[NSString stringWithFormat:@"%d",1] forKey:@"pageno"];
+    [dict setValue:[NSString stringWithFormat:@"%ld",_pageno] forKey:@"pageno"];
     [dict setValue:[NSString stringWithFormat:@"%d",10] forKey:@"pagesize"];
-    [self.Connection ConnectWithMeThod:GET Url:INDEXARTICLE Parameters:dict Success:^(NSDictionary *data) {
-        if ([[data valueForKey:@"success"] boolValue]) {
-            self.IndexArray = [HGIndexModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]];
-            [self setUpHomeBodyViewWithArray:self.IndexArray];
-        } else {
-            
-        }
-    } Failure:^(NSError *error) {
-        
+    [hud ShowWaitWithState:@"获取数据..." Excute:^{
+        [self.Connection ConnectWithMeThod:GET Url:INDEXARTICLE Parameters:dict Success:^(NSDictionary *data) {
+            if ([[data valueForKey:@"success"] boolValue]) {
+                self.pages = [[[data valueForKey:@"data"] valueForKey:@"pages"] integerValue];
+                if (NewView) {
+                    self.IndexArray = [HGIndexModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]];
+                    [self setUpHomeBodyViewWithArray:self.IndexArray];
+                }
+                else{
+                    if (RemoveData) {
+                        [self.IndexArray removeAllObjects];
+                        self.IndexArray  = [HGIndexModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]];
+                        [self.HomeTabView reloadData];
+                    }
+                    else{
+                        self.IndexArray = [[self.IndexArray arrayByAddingObjectsFromArray:[HGIndexModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]]] mutableCopy];
+                        [self.HomeTabView reloadData];
+                    }
+                }
+            } else {
+                [hud ShowToastWithState:[data valueForKey:@"msg"] Complete:^{
+                    [hud DissmissWaiting];
+                }];
+            }
+        } Failure:^(NSError *error) {
+            [hud ShowToastWithState:@"网络请求失败..." Complete:^{
+                [hud DissmissWaiting];
+            }];
+        }];
+    } Complete:^{
+        [self.HomeTabView.mj_header endRefreshing];
+        [self.HomeTabView.mj_footer endRefreshing];
+        self.HomeTabView.mj_header.state = MJRefreshStateIdle;
+        self.HomeTabView.mj_footer.state = MJRefreshStateIdle;
+        [hud DissmissWaiting];
     }];
+    
 }
 
 #pragma mark - 初始化视图
@@ -64,6 +118,8 @@ NSString *HomeCell = @"HGHomeTabCell";
     self.HomeTabView = HomeTabView;
     [self.view addSubview:HomeTabView];
     
+    HomeTabView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(FreshHeadData)];
+    HomeTabView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(LoadMoreData)];
     HGHomeNavView *HomeNavView = [[HGHomeNavView alloc] initWithFrame:CGRectMake(0, 0, HGWidth, 64)];
     self.HomeNavView = HomeNavView;
     [self.view addSubview:HomeNavView];

@@ -109,6 +109,7 @@
         //设置CollectionView的属性
         HGCateCollectionView *CateView = [[HGCateCollectionView alloc] initWithFrame:CGRectMake(0, 0, HGWidth, HGHeight - NaviBarStateHeight - TabBarHeight) collectionViewLayout:flowLayout];
         CateView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadFreshHeaderData)];
+        CateView.mj_footer = [MJRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreFooterData)];
         CateView.CateArray = CateArray;
         CateView.alwaysBounceVertical = YES;
         CateView.backgroundColor = [UIColor colorWithHexString:HGWhiteGray];
