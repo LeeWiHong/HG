@@ -39,13 +39,13 @@
     [self addSubview:ItemImage];
     
     [ItemImage makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.top).offset(0);
+        make.top.equalTo(self.top).offset(10);
         make.left.equalTo(self.left).offset(0);
         make.right.equalTo(self.right).offset(0);
         make.height.mas_equalTo(self.width);
     }];
     
-    UILabel *ItemLabel = [UILabel LabelWithFone:14 Color:HGBlack];
+    UILabel *ItemLabel = [UILabel LabelWithFone:16 Color:HGBlack];
     ItemLabel.text = @"Android";
     self.ItemLabel = ItemLabel;
     [self addSubview:ItemLabel];

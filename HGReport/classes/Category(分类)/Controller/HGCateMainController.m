@@ -17,6 +17,9 @@
 
 @property(nonatomic,weak) HGCateCollectionView *CateView;
 
+@property(nonatomic,assign) NSInteger pageno;
+
+@property(nonatomic,assign) NSInteger pages;
 @end
 
 @implementation HGCateMainController
@@ -24,21 +27,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"分类";
+    self.pageno = 1;
     self.view.backgroundColor = [UIColor colorWithHexString:HGWhite];
-    [self ConnectWithAllCategory];
+    [self ConnectWithAllCategoryWithNewView:YES WithPageNo:self.pageno];
     
 }
 
 #pragma mark - 网络请求所有分类
 
-- (void) ConnectWithAllCategory
+- (void) ConnectWithAllCategoryWithNewView:(BOOL) NewView WithPageNo:(NSInteger) pageno
 {
     HGHUD *hud = [[HGHUD alloc] initWithView:self.view];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:[NSString stringWithFormat:@"%ld",pageno] forKey:@"pageno"];
+    [dict setValue:@"9" forKey:@"pagesize"];
     [hud ShowWaitWithState:@"获取数据..." Excute:^{
-        [self.Connection ConnectWithMeThod:GET Url:ALLCATEGORY Parameters:nil Success:^(NSDictionary *data) {
+        [self.Connection ConnectWithMeThod:GET Url:ALLCATEGORY Parameters:dict Success:^(NSDictionary *data) {
             if ([[data valueForKey:@"success"] boolValue]) {
-                self.CateArray = [HGCateModel mj_objectArrayWithKeyValuesArray:[data valueForKey:@"data"]];
-                [self setUpCategoryBodyViewWithArray:self.CateArray];
+                
+                if (NewView) {
+                    self.CateArray = [HGCateModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]];
+                    self.pages = [[data valueForKey:@"data"] valueForKey:@"pages"];
+                    [self setUpCategoryBodyViewWithArray:self.CateArray];
+                }
+                else{
+                    self.CateArray = [self.CateArray arrayByAddingObjectsFromArray:[HGCateModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]]];
+                    [self.CateView reloadData];
+                }
+                
             }
             else
             {
@@ -58,6 +74,27 @@
     
 }
 
+#pragma mark - 刷新数据
+
+- (void) loadFreshHeaderData
+{
+    self.pageno = 1;
+    [self ConnectWithAllCategoryWithNewView:NO WithPageNo:self.pageno];
+}
+
+#pragma mark - 加载更多数据
+
+- (void) loadMoreFooterData
+{
+    self.pageno = self.pageno + 1;
+    if (self.pageno <= self.pages) {
+        [self ConnectWithAllCategoryWithNewView:NO WithPageNo:self.pageno];
+    }
+    else{
+        [self.CateView.mj_footer setState:MJRefreshStateNoMoreData];
+    }
+}
+
 #pragma mark - 初始化分类视图
 
 - (void) setUpCategoryBodyViewWithArray:(NSMutableArray *)CateArray
@@ -71,7 +108,7 @@
         [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
         //设置CollectionView的属性
         HGCateCollectionView *CateView = [[HGCateCollectionView alloc] initWithFrame:CGRectMake(0, 0, HGWidth, HGHeight - NaviBarStateHeight - TabBarHeight) collectionViewLayout:flowLayout];
-        CateView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(ConnectWithAllCategory)];
+        CateView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadFreshHeaderData)];
         CateView.CateArray = CateArray;
         CateView.alwaysBounceVertical = YES;
         CateView.backgroundColor = [UIColor colorWithHexString:HGWhiteGray];

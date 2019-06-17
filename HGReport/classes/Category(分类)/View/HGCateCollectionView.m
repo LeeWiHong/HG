@@ -38,12 +38,12 @@ NSString *CateItem = @"HGCateCollectionCell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(200 * HGAutoWidth, 260 * HGAutoHeight);
+    return CGSizeMake(200 * HGAutoWidth, 300 * HGAutoHeight);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(10, (HGWidth - (200 * HGAutoWidth) * 3) / 4, 10, (HGWidth - (200 * HGAutoWidth) * 3) / 4);
+    return UIEdgeInsetsMake(20, (HGWidth - (200 * HGAutoWidth) * 3) / 4, 10, (HGWidth - (200 * HGAutoWidth) * 3) / 4);
 }
 
 
@@ -56,7 +56,7 @@ NSString *CateItem = @"HGCateCollectionCell";
 #pragma mark  定义每个UICollectionView的纵向间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 20 * HGAutoWidth;
+    return 40 * HGAutoWidth;
 }
 
 #pragma mark  点击CollectionView触发事件
