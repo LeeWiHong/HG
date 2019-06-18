@@ -17,9 +17,9 @@
 
 @property(nonatomic,weak) HGCateCollectionView *CateView;
 
-@property(nonatomic,assign) NSInteger pageno;
+@property(nonatomic,assign) int pageno;
 
-@property(nonatomic,assign) NSInteger pages;
+@property(nonatomic,assign) int pages;
 @end
 
 @implementation HGCateMainController
@@ -29,13 +29,35 @@
     self.navigationItem.title = @"分类";
     self.pageno = 1;
     self.view.backgroundColor = [UIColor colorWithHexString:HGWhite];
-    [self ConnectWithAllCategoryWithNewView:YES WithPageNo:self.pageno];
+    [self ConnectWithAllCategoryWithNewView:YES RemoveData:NO WithPageNo:self.pageno];
     
 }
 
+#pragma mark - 刷新数据
+
+- (void) loadFreshHeaderData
+{
+    self.pageno = 1;
+    [self ConnectWithAllCategoryWithNewView:NO RemoveData:YES WithPageNo:self.pageno];
+}
+
+#pragma mark - 加载更多数据
+
+- (void) loadMoreFooterData
+{
+    self.pageno = self.pageno + 1;
+    if (_pageno <= _pages) {
+        [self ConnectWithAllCategoryWithNewView:NO RemoveData:NO WithPageNo:self.pageno];
+    }
+    else{
+        [self.CateView.mj_footer setState:MJRefreshStateNoMoreData];
+    }
+}
+
+
 #pragma mark - 网络请求所有分类
 
-- (void) ConnectWithAllCategoryWithNewView:(BOOL) NewView WithPageNo:(NSInteger) pageno
+- (void) ConnectWithAllCategoryWithNewView:(BOOL) NewView RemoveData:(BOOL)RemoveData WithPageNo:(NSInteger) pageno
 {
     HGHUD *hud = [[HGHUD alloc] initWithView:self.view];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -44,17 +66,21 @@
     [hud ShowWaitWithState:@"获取数据..." Excute:^{
         [self.Connection ConnectWithMeThod:GET Url:ALLCATEGORY Parameters:dict Success:^(NSDictionary *data) {
             if ([[data valueForKey:@"success"] boolValue]) {
-                
+                self.pages = [[[data valueForKey:@"data"] valueForKey:@"pages"] intValue];
                 if (NewView) {
                     self.CateArray = [HGCateModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]];
                     self.pages = [[data valueForKey:@"data"] valueForKey:@"pages"];
                     [self setUpCategoryBodyViewWithArray:self.CateArray];
                 }
                 else{
-                    self.CateArray = [self.CateArray arrayByAddingObjectsFromArray:[HGCateModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]]];
+                    if (RemoveData) {
+                        [self.CateArray removeAllObjects];
+                        self.CateArray = [HGCateModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]];
+                    } else {
+                        self.CateArray = [[self.CateArray arrayByAddingObjectsFromArray:[HGCateModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]]] mutableCopy];
+                    }
                     [self.CateView reloadData];
                 }
-                
             }
             else
             {
@@ -69,31 +95,14 @@
         }];
     } Complete:^{
         [self.CateView.mj_header endRefreshing];
+        [self.CateView.mj_footer endRefreshing];
+        self.CateView.mj_header.state = MJRefreshStateIdle;
+        self.CateView.mj_footer.state = MJRefreshStateIdle;
         [hud DissmissWaiting];
     }];
     
 }
 
-#pragma mark - 刷新数据
-
-- (void) loadFreshHeaderData
-{
-    self.pageno = 1;
-    [self ConnectWithAllCategoryWithNewView:NO WithPageNo:self.pageno];
-}
-
-#pragma mark - 加载更多数据
-
-- (void) loadMoreFooterData
-{
-    self.pageno = self.pageno + 1;
-    if (self.pageno <= self.pages) {
-        [self ConnectWithAllCategoryWithNewView:NO WithPageNo:self.pageno];
-    }
-    else{
-        [self.CateView.mj_footer setState:MJRefreshStateNoMoreData];
-    }
-}
 
 #pragma mark - 初始化分类视图
 
@@ -108,8 +117,8 @@
         [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
         //设置CollectionView的属性
         HGCateCollectionView *CateView = [[HGCateCollectionView alloc] initWithFrame:CGRectMake(0, 0, HGWidth, HGHeight - NaviBarStateHeight - TabBarHeight) collectionViewLayout:flowLayout];
-        CateView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadFreshHeaderData)];
-        CateView.mj_footer = [MJRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreFooterData)];
+        CateView.mj_header = [HGFreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadFreshHeaderData)];
+        CateView.mj_footer = [HGFreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreFooterData)];
         CateView.CateArray = CateArray;
         CateView.alwaysBounceVertical = YES;
         CateView.backgroundColor = [UIColor colorWithHexString:HGWhiteGray];

@@ -63,5 +63,8 @@
 #import "HGExpressTools.h"
 #import "RSA.h"
 
+#import "HGFreshFooter.h"
+#import "HGFreshHeader.h"
+
 
 #endif /* PrefixHeader_pch */

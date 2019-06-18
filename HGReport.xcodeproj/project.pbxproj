@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3023BEF22B8839300617096 /* HGFreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3023BEE22B8839300617096 /* HGFreshFooter.m */; };
+		F3023BF222B8867A00617096 /* HGFreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3023BF122B8867A00617096 /* HGFreshHeader.m */; };
 		F307F307229395F100DED84D /* android@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F307F306229395F100DED84D /* android@2x.png */; };
 		F307F30A2293AEFD00DED84D /* HGCateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F3092293AEFD00DED84D /* HGCateModel.m */; };
 		F307F30D2293D95200DED84D /* HGHomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = F307F30C2293D95200DED84D /* HGHomeNavView.m */; };
@@ -98,6 +100,10 @@
 /* Begin PBXFileReference section */
 		05A1164591F3513505EEAFC2 /* Pods-HGReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HGReport/Pods-HGReport.debug.xcconfig"; sourceTree = "<group>"; };
 		143842FE5D00F58015F1E9CB /* libPods-HGReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HGReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3023BED22B8839300617096 /* HGFreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGFreshFooter.h; sourceTree = "<group>"; };
+		F3023BEE22B8839300617096 /* HGFreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGFreshFooter.m; sourceTree = "<group>"; };
+		F3023BF022B8867A00617096 /* HGFreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGFreshHeader.h; sourceTree = "<group>"; };
+		F3023BF122B8867A00617096 /* HGFreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGFreshHeader.m; sourceTree = "<group>"; };
 		F307F306229395F100DED84D /* android@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "android@2x.png"; sourceTree = "<group>"; };
 		F307F3082293AEFD00DED84D /* HGCateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGCateModel.h; sourceTree = "<group>"; };
 		F307F3092293AEFD00DED84D /* HGCateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGCateModel.m; sourceTree = "<group>"; };
@@ -276,6 +282,17 @@
 				FDE9756CD700063A00D5803C /* Pods-HGReport.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F3023BEC22B8836200617096 /* Fresh */ = {
+			isa = PBXGroup;
+			children = (
+				F3023BED22B8839300617096 /* HGFreshFooter.h */,
+				F3023BEE22B8839300617096 /* HGFreshFooter.m */,
+				F3023BF022B8867A00617096 /* HGFreshHeader.h */,
+				F3023BF122B8867A00617096 /* HGFreshHeader.m */,
+			);
+			path = Fresh;
 			sourceTree = "<group>";
 		};
 		F392C8A8228C0EE9007655DE /* SystemTools */ = {
@@ -602,6 +619,7 @@
 		F3EE06852285545D00F03534 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F3023BEC22B8836200617096 /* Fresh */,
 				F392C8A8228C0EE9007655DE /* SystemTools */,
 				F3EE06862285545D00F03534 /* Network */,
 				F3EE06872285545D00F03534 /* SystemCategory */,
@@ -863,6 +881,7 @@
 				F39424A9228D478700546C90 /* RSA.m in Sources */,
 				F307F3132293DD2900DED84D /* HGHomeTabCell.m in Sources */,
 				F3DC313822925C1100E42C91 /* HGPersonalMainController.m in Sources */,
+				F3023BF222B8867A00617096 /* HGFreshHeader.m in Sources */,
 				F3EE06DD228579EB00F03534 /* HGHUD.m in Sources */,
 				F3D6ADC622925D1000F66070 /* HGLoginMainController.m in Sources */,
 				F3DC312B22925C0A00E42C91 /* HGHomeMainController.m in Sources */,
@@ -872,6 +891,7 @@
 				F3EE06832285537A00F03534 /* main.m in Sources */,
 				F3DC315A22925C1B00E42C91 /* HGRegSetView.m in Sources */,
 				F3CEC13E228870CB0022161D /* UIButton+HGButton.m in Sources */,
+				F3023BEF22B8839300617096 /* HGFreshFooter.m in Sources */,
 				F3D6ADCC2292794400F66070 /* HGAdviceFeedView.m in Sources */,
 				F3DC315522925C1B00E42C91 /* HGRegSetMainController.m in Sources */,
 				F37B9B7F2293117800FBAA28 /* HGCateCollectionCell.m in Sources */,

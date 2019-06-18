@@ -118,8 +118,9 @@ NSString *HomeCell = @"HGHomeTabCell";
     self.HomeTabView = HomeTabView;
     [self.view addSubview:HomeTabView];
     
-    HomeTabView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(FreshHeadData)];
-    HomeTabView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(LoadMoreData)];
+    HomeTabView.mj_header = [HGFreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(FreshHeadData)];
+    HomeTabView.mj_footer = [HGFreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(LoadMoreData)];
+    
     HGHomeNavView *HomeNavView = [[HGHomeNavView alloc] initWithFrame:CGRectMake(0, 0, HGWidth, 64)];
     self.HomeNavView = HomeNavView;
     [self.view addSubview:HomeNavView];

@@ -77,7 +77,7 @@
             make.height.mas_equalTo(160 * HGAutoHeight);
         }];
         
-        UILabel *StateLabel = [UILabel LabelWithFone:14 Color:HGBlack];
+        UILabel *StateLabel = [UILabel LabelWithFone:14 Color:HGRED];
         StateLabel.text = State;
         self.StateLabel = StateLabel;
         [self addSubview:StateLabel];
