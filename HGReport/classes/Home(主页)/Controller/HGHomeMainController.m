@@ -10,6 +10,7 @@
 #import "HGHomeNavView.h"
 #import "HGHomeTabCell.h"
 #import "HGIndexModel.h"
+#import "HGDetailController.h"
 
 @interface HGHomeMainController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -152,6 +153,11 @@ NSString *HomeCell = @"HGHomeTabCell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self Jump2DetailVC];
+}
+
 #pragma mark - 处理滑动
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -171,6 +177,15 @@ NSString *HomeCell = @"HGHomeTabCell";
     NSLog(@"bbb%f",self.HomeNavView.alpha);
 }
 
+#pragma mark - 跳转详情页面
+
+- (void) Jump2DetailVC
+{
+    HGDetailController *DetailVC = [[HGDetailController alloc] init];
+    DetailVC.hidesBottomBarWhenPushed = YES;
+    DetailVC.title = @"详情";
+    [self.navigationController pushViewController:DetailVC animated:YES];
+}
 
 
 @end

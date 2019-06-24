@@ -76,10 +76,15 @@
                     if (RemoveData) {
                         [self.CateArray removeAllObjects];
                         self.CateArray = [HGCateModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]];
+                        self.CateView.CateArray = self.CateArray;
+                       
                     } else {
                         self.CateArray = [[self.CateArray arrayByAddingObjectsFromArray:[HGCateModel mj_objectArrayWithKeyValuesArray:[[data valueForKey:@"data"] valueForKey:@"list"]]] mutableCopy];
+                        self.CateView.CateArray = self.CateArray;
+                        [self.CateView reloadData];
                     }
-                    [self.CateView reloadData];
+                     [self.CateView reloadData];
+                    
                 }
             }
             else

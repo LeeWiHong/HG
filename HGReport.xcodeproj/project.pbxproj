@@ -78,6 +78,7 @@
 		F3EE06DA2285729E00F03534 /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3EE06D92285729D00F03534 /* btn_back@2x.png */; };
 		F3EE06DD228579EB00F03534 /* HGHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE06DC228579EB00F03534 /* HGHUD.m */; };
 		F3EE06E022857C1F00F03534 /* HGNetWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE06DF22857C1F00F03534 /* HGNetWordView.m */; };
+		F3FE817D22B8D65A0024DBA1 /* HGDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FE817C22B8D65A0024DBA1 /* HGDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,6 +223,8 @@
 		F3EE06DC228579EB00F03534 /* HGHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGHUD.m; sourceTree = "<group>"; };
 		F3EE06DE22857C1F00F03534 /* HGNetWordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGNetWordView.h; sourceTree = "<group>"; };
 		F3EE06DF22857C1F00F03534 /* HGNetWordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGNetWordView.m; sourceTree = "<group>"; };
+		F3FE817B22B8D65A0024DBA1 /* HGDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGDetailController.h; sourceTree = "<group>"; };
+		F3FE817C22B8D65A0024DBA1 /* HGDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGDetailController.m; sourceTree = "<group>"; };
 		FDE9756CD700063A00D5803C /* Pods-HGReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGReport.release.xcconfig"; path = "Pods/Target Support Files/Pods-HGReport/Pods-HGReport.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -565,6 +568,7 @@
 		F3EE067A2285537A00F03534 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				F3FE817222B8D6420024DBA1 /* Detail(详情) */,
 				F3DC313C22925C1A00E42C91 /* Login(登录) */,
 				F3DC312C22925C1100E42C91 /* Personal(个人中心) */,
 				F3DC312522925C0A00E42C91 /* Home(主页) */,
@@ -676,6 +680,39 @@
 				F326B2692289AF4300CAE1AA /* HGAddressBook.h */,
 			);
 			path = GlobalValue;
+			sourceTree = "<group>";
+		};
+		F3FE817222B8D6420024DBA1 /* Detail(详情) */ = {
+			isa = PBXGroup;
+			children = (
+				F3FE817322B8D6420024DBA1 /* Controller */,
+				F3FE817422B8D6420024DBA1 /* Model */,
+				F3FE817522B8D6420024DBA1 /* View */,
+			);
+			path = "Detail(详情)";
+			sourceTree = "<group>";
+		};
+		F3FE817322B8D6420024DBA1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3FE817B22B8D65A0024DBA1 /* HGDetailController.h */,
+				F3FE817C22B8D65A0024DBA1 /* HGDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3FE817422B8D6420024DBA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3FE817522B8D6420024DBA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -891,6 +928,7 @@
 				F3EE06832285537A00F03534 /* main.m in Sources */,
 				F3DC315A22925C1B00E42C91 /* HGRegSetView.m in Sources */,
 				F3CEC13E228870CB0022161D /* UIButton+HGButton.m in Sources */,
+				F3FE817D22B8D65A0024DBA1 /* HGDetailController.m in Sources */,
 				F3023BEF22B8839300617096 /* HGFreshFooter.m in Sources */,
 				F3D6ADCC2292794400F66070 /* HGAdviceFeedView.m in Sources */,
 				F3DC315522925C1B00E42C91 /* HGRegSetMainController.m in Sources */,
