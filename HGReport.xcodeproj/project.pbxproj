@@ -18,6 +18,8 @@
 		F3167DA12294F56B00C8046F /* HGIndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3167DA02294F56B00C8046F /* HGIndexModel.m */; };
 		F318C0FE22867184000D4D94 /* UIScrollView+HeaderScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F318C0FC22867184000D4D94 /* UIScrollView+HeaderScaleImage.m */; };
 		F326B2682289AAF400CAE1AA /* HGNetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F326B2672289AAF400CAE1AA /* HGNetworkUtils.m */; };
+		F32CDAA322C0C5130015FC89 /* MMMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32CDAA122C0BD7E0015FC89 /* MMMarkdown.framework */; };
+		F32CDAA422C0C5130015FC89 /* MMMarkdown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F32CDAA122C0BD7E0015FC89 /* MMMarkdown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F37B9B7C22930FAA00FBAA28 /* HGCateCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B9B7B22930FAA00FBAA28 /* HGCateCollectionView.m */; };
 		F37B9B7F2293117800FBAA28 /* HGCateCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B9B7E2293117800FBAA28 /* HGCateCollectionCell.m */; };
 		F392C8AB228C0F1D007655DE /* HGExpressTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F392C8AA228C0F1D007655DE /* HGExpressTools.m */; };
@@ -98,6 +100,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F32CDAA522C0C5130015FC89 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F32CDAA422C0C5130015FC89 /* MMMarkdown.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		05A1164591F3513505EEAFC2 /* Pods-HGReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HGReport/Pods-HGReport.debug.xcconfig"; sourceTree = "<group>"; };
 		143842FE5D00F58015F1E9CB /* libPods-HGReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HGReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +138,8 @@
 		F326B2662289AAF400CAE1AA /* HGNetworkUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGNetworkUtils.h; sourceTree = "<group>"; };
 		F326B2672289AAF400CAE1AA /* HGNetworkUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGNetworkUtils.m; sourceTree = "<group>"; };
 		F326B2692289AF4300CAE1AA /* HGAddressBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGAddressBook.h; sourceTree = "<group>"; };
+		F32CDAA122C0BD7E0015FC89 /* MMMarkdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MMMarkdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F363CD8622C0B7EF001A0F2C /* GHMarkdownParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GHMarkdownParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B9B7A22930FAA00FBAA28 /* HGCateCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGCateCollectionView.h; sourceTree = "<group>"; };
 		F37B9B7B22930FAA00FBAA28 /* HGCateCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGCateCollectionView.m; sourceTree = "<group>"; };
 		F37B9B7D2293117800FBAA28 /* HGCateCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGCateCollectionCell.h; sourceTree = "<group>"; };
@@ -236,6 +254,7 @@
 				F3BA2835228A6C3600103778 /* AdSupport.framework in Frameworks */,
 				F3BA2833228A6C2E00103778 /* CoreTelephony.framework in Frameworks */,
 				F3BA2831228A6C2600103778 /* SystemConfiguration.framework in Frameworks */,
+				F32CDAA322C0C5130015FC89 /* MMMarkdown.framework in Frameworks */,
 				F3BA282F228A6C1000103778 /* libc++.tbd in Frameworks */,
 				F3BA282D228A6BF400103778 /* JavaScriptCore.framework in Frameworks */,
 				F3BA282B228A6BEC00103778 /* MessageUI.framework in Frameworks */,
@@ -265,6 +284,8 @@
 		2FB2542FE8D503143B1F6689 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F32CDAA122C0BD7E0015FC89 /* MMMarkdown.framework */,
+				F363CD8622C0B7EF001A0F2C /* GHMarkdownParser.framework */,
 				F3BA2834228A6C3600103778 /* AdSupport.framework */,
 				F3BA2832228A6C2E00103778 /* CoreTelephony.framework */,
 				F3BA2830228A6C2600103778 /* SystemConfiguration.framework */,
@@ -728,6 +749,7 @@
 				F3EE06432285532500F03534 /* Resources */,
 				A4E268ABFB61024A9497F283 /* [CP] Embed Pods Frameworks */,
 				78D40D74FD92609D2F911559 /* [CP] Copy Pods Resources */,
+				F32CDAA522C0C5130015FC89 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1142,6 +1164,48 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FDFullscreenPopGesture\"",
+					"-l\"FMDB\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Bugly\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"MOBFoundation\"",
+					"-framework",
+					"\"MOBFoundationEx\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SMS_SDK\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.360arrow.HGReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1162,6 +1226,48 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FDFullscreenPopGesture\"",
+					"-l\"FMDB\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Bugly\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"MOBFoundation\"",
+					"-framework",
+					"\"MOBFoundationEx\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SMS_SDK\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.360arrow.HGReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
